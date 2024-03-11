@@ -1,0 +1,42 @@
+\documentclass{solve}
+
+\usepackage{tikz}
+
+\begin{document}
+  \pageHeader{Odwrotność}{ODW0}{64}{1}
+
+  Jasio często lubi robić rzeczy na~opak. W~dodatku jest dość leniwy. Tym razem
+  na opak oraz leniwie postanowił napisać napis. Za każdym razem kiedy Jasiowi
+  przyszło do głowy coś odwrócić to umieszczał to w~nawiasie: na~przykład, jeśli
+  Jasio napisał \texttt{inf(ormat)yka} to miał naprawdę na myśli napis
+  \texttt{inftamroyka}. Problem w tym, że Jasio jest bardzo sprytny i czasami
+  nawiasy umieszczał wewnątrz innych nawiasów. Przy odczytywaniu prawdziwych
+  intencji Jasia oczywiście należy (tak jak w~przypadku działań matematycznych)
+  odwracać zawartość nawiasów od najbardziej do najmniej zagnieżdżonych:
+  na~przykład: \texttt{nap(is(odw)ro(co)nypar)erazy} należy rozumieć jako
+  równoważny z \texttt{nap(iswdoroocnypar)erazy}, czyli:
+  \texttt{naprapyncoorodwsierazy}.
+
+  Jasio oczywiście nie ma teraz chęci na ustalanie co~tak naprawdę miał
+  na myśli. Ale Ty przecież potrafisz programować...
+
+  Napisz program, który wczyta napis napisany przez Jasia, wyznaczy co tak
+  naprawdę Jasio miał na myśli i~wypisze wynik na wyjście.
+
+	\section{Wejście}
+  W~pierwszym (jedynym) wierszu wejścia znajduje się ciąg małych liter alfabetu
+  angielskiego oraz nawiasów \texttt{(} i \texttt{)} -- napis Jasia.
+
+  Można założyć, że po zignorowaniu liter, wejście stanowi poprawne
+  nawiasowanie.
+
+	\section{Wyjście}
+  W~pierwszym (jedynym) wierszu wyjścia należy wypisać napis Jasia po~odwróceniu
+  fragmentów w~nawiasach, zgodnie z~regułami opisanymi powyżej.
+
+  \section{Ograniczenia}
+  Długość napisu Jasia na~wejściu nie~przekracza $1\,000\,000$ znaków.
+
+	\section{Przykład}
+    \testVerb{odw0.in}{odw0.out}{}
+\end{document}
