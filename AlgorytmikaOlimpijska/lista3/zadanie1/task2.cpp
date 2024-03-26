@@ -33,10 +33,18 @@ string to_roman(int n) {
 }
 
 int main() {
-	int n;
-	cin >> n;
+	map<string, int> to_arabic;
+	for (int i = 1; i <= 3999; i++)
+		to_arabic[to_roman(i)] = i;
 
-	cout << to_roman(n) << '\n';
+	string s;
+	cin >> s;
+
+	auto it = to_arabic.find(s);
+	if (it == to_arabic.end())
+		cout << "NIE\n";
+	else
+		cout << it->second << '\n';
 
 	return 0;
 }

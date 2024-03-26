@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int K = 4;
+const int K = 6;
 
 int main() {
 
