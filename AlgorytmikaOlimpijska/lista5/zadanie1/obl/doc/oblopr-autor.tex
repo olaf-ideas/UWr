@@ -1,0 +1,64 @@
+ \documentclass[opr,utf8]{sinol}
+ 
+ \usepackage{tikz}
+ 
+  \title{Obliczenia w chmurze}
+  \id{obl}
+  \signature{kpok???}
+  \author{Karol Pokorski} %% autor opracowania
+  \history{2.08.2018}{KPok, przygotowanie opracowania autorskiego}{1.00}
+
+\begin{document}
+  \begin{tasktext}%
+
+  \section{Rozwiązanie wzorcowe}
+    Wrzucamy oferty procesorów i~zadania do~jednego wora.
+    Sortujemy to~względem częstotliwości malejąco.
+
+    Przetwarzamy teraz zdarzenia dwóch typów:
+    \begin{itemize}
+      \item oferta procesora, który wystarczy częstotliwością taktowania
+      na~wykonanie wszystkich zadań, które przeanalizujemy za~chwilę,
+      \item zlecenie obliczenia.
+    \end{itemize}
+    Tym samym (dzięki sortowaniu) wyeliminowaliśmy problem zajmowania się
+    częstotliwością taktowania.
+
+    Teraz jak przetwarzać zdarzenia.
+    Utrzymujemy dynamika, którego stanem jest liczba już kupionych, ale jeszcze
+    nieużytych rdzeni procesorów.
+
+    Gdy dostajemy ofertę procesora aktualizujemy tablicę dynamika liniowo względem
+    liczby stanów, podobnie jak w~problemie plecakowym.
+    Analogicznie (tylko od~drugiej strony) postępujemy z~zadaniami do~wykonania.
+
+    Złożoność to: łączna liczba rdzeni wszystkich procesorów razy liczba zdarzeń.
+    Z~uwagi na~naprawdę małą stałą, możnaby nawet jeszcze podbić te limity
+    co~są w~zadaniu (powiedzmy $n, m \le 5\,000$ na~moim kompie działa sekundę).
+    Nie wiem czy chcemy, zawodnicy mogą nie zgadnąć, że~to będzie dostatecznie
+    szybkie.
+
+    Wzorcówka jest już zaimplementowana w~\solution{.cpp}.
+
+  \section{Potencjalne inne rozwiązania}
+    \begin{itemize}
+      \item zgadywanie podzbioru procesorów do~kupienia i~ustalanie potem
+      zadań, które dadzą się zrobić (nie wiem czy się da),
+      \item zgadywanie podzbioru zadań do~wykonania i~ustalanie potem
+      procesorów, które należy kupić (nie wiem czy się da),
+      \item randomowe shufflowanie kolejności zadań i procesorów, kupowanie
+      prefiksu listy procesorów, aby wykonać prefiks listy zadań (wybór optymalnego
+      prefiksu w optymalnym random shufflowaniu)
+      \item jakieś zachłany oparte o jakieś dziwne współczynniki,
+      \item rozwiązanie bez obserwacji o~sortowaniu po~częstotliwości (działa, gdy $f_i = F_i = 1$),
+      \item matching ważony między procesorami a~zadaniami (działa, gdy $c_i = C_i = 1$),
+    \end{itemize}
+
+  \section{Do rozważenia}
+    Być może chcemy wymagać od~zawodników wypisania pełnej odpowiedzi (tj.
+    listy kupionych procesorów i~wykonanych zadań)... jeśli Opracowujący idzie
+    w~ten wariant, niech upewni się, że zarówno zmodyfikowana wzorcówka jak
+    i~weryfikator outputa jest poprawny. W~razie wątpliwości, lepiej się nie męczyć.
+
+  \end{tasktext}
+\end{document}

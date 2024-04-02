@@ -1,0 +1,97 @@
+\documentclass[zad,zawodnik,utf8]{sinol}
+
+\usepackage{tikz}
+
+  \title{Obliczenia w chmurze}
+  \id{obl}
+  \signature{kpok???}
+  \author{Karol Pokorski} % Autor zadania
+  \pagestyle{fancy}
+  \iomode{stdin}
+  % HINT: Pola konkurs, etap, day, date uzupelnia kierownik konkursu.
+  \konkurs{OI}
+  \etap{???}
+  \day{???}
+  \date{???}
+  \history{2.08.2018}{KPok, redakcja}{1.00}
+  \RAM{64} % HINT: To pole uzupelnia opracowujacy
+
+\begin{document}
+  \begin{tasktext}%
+    Jasio zakłada właśnie Bajtokomp -- firmę oferującą moc obliczeniową w~chmurze.
+    Firma taka dysponuje zapleczem bardzo szybkich komputerów, na~których
+    wykonywane są obliczenia klientów.
+
+    Każdy klient prosząc o~zasoby podaje minimalną częstotliwość taktowania
+    oraz liczbę rdzeni procesora, których będzie potrzebował do~swoich obliczeń.
+    Oprócz tego ustalana jest też indywidualna stawka za udostępnienie żądanych
+    zasobów. Jeśli firma Jasia zdecyduje się przyjąć zlecenie, musi dostarczyć
+    wyłączny dostęp do~mocy obliczeniowej żądanej przez klienta. Nie wiadomo
+    przez jaki czas klient będzie wykorzystywał uzyskane zasoby, więc Jasio zakłada,
+    że będzie to do końca istnienia jego firmy. Niedopuszczalne jest zatem
+    przydzielenie tego samego rdzenia procesora wielu różnym klientom.
+    Każdy procesor posiada kilka (być może jeden) niezależnych rdzeni, które
+    można dowolnie rozdzielić pomiędzy różnych klientów. Dopuszczalne jest
+    przydzielenie rdzeni z~kilku różnych procesorów temu samemu klientowi.
+
+    Jasio zanim założył firmę, otrzymał listę $m$~potencjalnych zleceń
+    do~wykonania. Problem polega na~tym, że nie~zakupił jeszcze żadnego
+    procesora. Poszedł więc do~sklepu i~otrzymał katalog $n$~dostępnych
+    procesorów: dla~każdego z~nich znana jest częstotliwość taktowania, liczba
+    rdzeni oraz cena. Każdy procesor jest dostępny na~stanie sklepu
+    tylko w~jednej sztuce. Więcej byłoby na~zamówienie, ale~Jasio nie~może
+    czekać, tylko musi działać -- dlatego rozważa tylko ofertę sklepu dostępną
+    od~ręki.
+
+    Pomóż Jasiowi nie~zbankrutować i~optymalnie wybierz zbiór zleceń, które
+    opłaca się wykonać oraz wybierz zbiór procesorów, które należy kupić, aby
+    wykonać wybrane zlecenia. Jasio chce aby Twój wybór zmaksymalizował jego
+    zysk.
+
+    \section{Wejście}
+    W~pierwszym wierszu wejścia znajduje się jedna liczba naturalna $n$,
+    $1 \le n \le 2\,000$, określająca liczbę procesorów w~sklepie.
+    W~kolejnych $n$~wierszach znajduje się opis procesorów.
+    Opis każdego procesora składa się z~trzech liczb naturalnych $c_i$, $f_i$ oraz $v_i$,
+    $1 \le c_i \le 50, 1 \le f_i \le 10^9, 1 \le v_i \le 10^9$,
+    pooddzielanych pojedynczymi odstępami, określających kolejno: liczbę rdzeni procesora,
+    częstotliwość taktowania każdego z~nich oraz cenę całego procesora.
+    W~kolejnym wierszu wejścia znajduje się jedna liczba naturalna $m$,
+    $1 \le m \le 2\,000$, określająca liczbę zleceń od~klientów.
+    Opis każdego zlecenia składa się z~trzech liczb naturalnych $C_i$, $F_i$ oraz $V_i$,
+    $1 \le C_i \le 50, 1 \le F_i \le 10^9, 1 \le V_i \le 10^9$,
+    pooddzielanych pojedynczymi odstępami, określających kolejno: wymaganą liczbę
+    rdzeni, wymaganą minimalną częstotliwość taktowania oraz wartość za~wykonanie
+    zlecenia.
+
+    \section{Wyjście}
+    W~pierwszym (jedynym) wierszu wyjścia powinna się znaleźć jedna liczba
+    całkowita -- maksymalny możliwy zysk (różnica pomiędzy zarobkiem za~wykonane
+    zlecenia oraz kosztem zakupu procesorów).
+
+    \section{Ocenianie}
+    Zestaw testów dzieli się na następujące podzadania.
+    Testy do każdego podzadania składają~się z~jednej lub~większej liczby osobnych grup testów.
+
+    \begin{center}
+      \begin{tabular}{|c|p{6cm}|c|}
+        \hline
+        \textbf{Podzadanie} & \textbf{Warunki} & \textbf{Liczba punktów} \\ \hline
+        1 & $n \le 15$ & 18 \\ \hline
+        2 & $m \le 15$ & 18 \\ \hline
+        3 & wszystkie $c_i$ oraz $C_i$ są równe $1$ & 18 \\ \hline
+        4 & wszystkie $f_i$ oraz $F_i$ są równe $1$ & 18 \\ \hline
+        5 & wszystkie $v_i$ oraz $V_i$ są równe $1$ & 18 \\ \hline
+        6 & brak dodatkowych ograniczeń & 10 \\ \hline
+      \end{tabular}
+    \end{center}
+
+    \makecompactexample
+
+    \noindent
+    \textbf{Wyjaśnienie do przykładu:}
+    Wystarczy kupić oba procesory czterordzeniowe (za~$700$ oraz $750$).
+    Następnie wykonać zlecenia pierwsze i drugie (zyskując $300$ oraz $1\,500$).
+    Zysk wyniesie wtedy: $1\,500 + 300 - 700 - 750 = 350$.
+  \end{tasktext}
+\end{document}
