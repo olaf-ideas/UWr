@@ -43,12 +43,9 @@ int main(int argc, char *argv[]) {
 	long long ans_dist = 0;
 	{
 		int k = ans.readInt();
+		ensure(2 <= k && k <= n);
 
-		if (k < 2 || n < k) {
-			quitf(_fail, "Długość ścieżki poza przedziałem [2, %d]", n);
-		}
-
-		vector<int> path(ans.readInt(2, n));
+		vector<int> path(k);
 
 		for (int &u : path) {
 			u = ans.readInt();

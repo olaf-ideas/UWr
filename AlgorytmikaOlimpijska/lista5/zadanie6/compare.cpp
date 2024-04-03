@@ -95,7 +95,7 @@ int main(int argc, char *argv[]) {
 	};
 
 	auto compare_words = [&](const string &A, const string &B) {
-		if (A.size() < 40 && B.size() < 40) {
+		if (A.size() < 70 && B.size() < 70) {
 			istringstream sa(A), sb(B);
 
 			long double a, b;
