@@ -1,0 +1,23 @@
+# dune utop src
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /home/olaf/.cache/dune/db
+# Workspace root: /home/olaf/UWr/MetodyProgramowania/lista6/zad6
+# Auto-detected concurrency: 8
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; installed_env =
+#      map
+#        { "INSIDE_DUNE" :
+#            "/home/olaf/UWr/MetodyProgramowania/lista6/zad6/_build/default"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; instrument_with = []
+#  }
+$ /home/olaf/.opam/4.14.1/bin/ocamlc.opt -config > /tmp/dune_6b9651_output
