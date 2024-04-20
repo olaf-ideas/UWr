@@ -1,0 +1,18 @@
+# dune utop src
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /home/olaf/.cache/dune/db
+# Workspace root: /home/olaf/UWr/MetodyProgramowania/lista7/zad5/let
+# Auto-detected concurrency: 8
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /home/olaf/.opam/default/bin/ocamlc.opt -config > /tmp/dune_906bdd_output
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -bin-annot -I src/.utop/.utop.eobjs/byte -I /home/olaf/.opam/default/lib/bytes -I /home/olaf/.opam/default/lib/findlib -I /home/olaf/.opam/default/lib/lambda-term -I /home/olaf/.opam/default/lib/logs -I /home/olaf/.opam/default/lib/lwt -I /home/olaf/.opam/default/lib/lwt/unix -I /home/olaf/.opam/default/lib/lwt_react -I /home/olaf/.opam/default/lib/mew -I /home/olaf/.opam/default/lib/mew_vi -I /home/olaf/.opam/default/lib/ocaml/compiler-libs -I /home/olaf/.opam/default/lib/ocaml/threads -I /home/olaf/.opam/default/lib/ocaml/unix -I /home/olaf/.opam/default/lib/ocplib-endian -I /home/olaf/.opam/default/lib/ocplib-endian/bigstring -I /home/olaf/.opam/default/lib/react -I /home/olaf/.opam/default/lib/result -I /home/olaf/.opam/default/lib/trie -I /home/olaf/.opam/default/lib/uchar -I /home/olaf/.opam/default/lib/utop -I /home/olaf/.opam/default/lib/uucp -I /home/olaf/.opam/default/lib/uuseg -I /home/olaf/.opam/default/lib/uutf -I /home/olaf/.opam/default/lib/xdg -I /home/olaf/.opam/default/lib/zed -I src/.let.objs/byte -no-alias-deps -o src/.utop/.utop.eobjs/byte/dune__exe__Utop.cmo -c -impl src/.utop/utop.ml-gen)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -o src/.utop/utop.bc /home/olaf/.opam/default/lib/ocaml/compiler-libs/ocamlcommon.cma /home/olaf/.opam/default/lib/ocaml/compiler-libs/ocamlbytecomp.cma /home/olaf/.opam/default/lib/ocaml/compiler-libs/ocamltoplevel.cma /home/olaf/.opam/default/lib/findlib/findlib.cma /home/olaf/.opam/default/lib/findlib/findlib_top.cma /home/olaf/.opam/default/lib/logs/logs.cma /home/olaf/.opam/default/lib/lwt/lwt.cma /home/olaf/.opam/default/lib/logs/logs_lwt.cma /home/olaf/.opam/default/lib/ocplib-endian/ocplib_endian.cma /home/olaf/.opam/default/lib/ocplib-endian/bigstring/ocplib_endian_bigstring.cma /home/olaf/.opam/default/lib/ocaml/unix/unix.cma /home/olaf/.opam/default/lib/ocaml/threads/threads.cma /home/olaf/.opam/default/lib/lwt/unix/lwt_unix.cma -I /home/olaf/.opam/default/lib/lwt/../stublibs /home/olaf/.opam/default/lib/react/react.cma /home/olaf/.opam/default/lib/lwt_react/lwt_react.cma /home/olaf/.opam/default/lib/result/result.cma /home/olaf/.opam/default/lib/uutf/uutf.cma /home/olaf/.opam/default/lib/uucp/uucp.cma /home/olaf/.opam/default/lib/uuseg/uuseg.cma /home/olaf/.opam/default/lib/zed/zed.cma /home/olaf/.opam/default/lib/trie/trie.cma /home/olaf/.opam/default/lib/mew/mew.cma /home/olaf/.opam/default/lib/mew_vi/mew_vi.cma /home/olaf/.opam/default/lib/lambda-term/lambda_term.cma -I /home/olaf/.opam/default/lib/lambda-term/../stublibs /home/olaf/.opam/default/lib/xdg/xdg.cma -I /home/olaf/.opam/default/lib/xdg/../stublibs /home/olaf/.opam/default/lib/utop/uTop.cma src/let.cma src/.utop/.utop.eobjs/byte/dune__exe__Utop.cmo -linkall -warn-error -31)
