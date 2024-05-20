@@ -1,0 +1,19 @@
+var n
+var p
+var d
+
+begin
+  read n
+  p := 2
+  while p <= n do
+  begin
+    d := n - (n / p) * p
+	while d = 0 do
+	begin
+      write p
+	  n := n / p
+	  d := n - (n / p) * p
+	end
+	p := p + 1
+  end
+end

@@ -1,0 +1,12 @@
+var x
+var y
+
+begin
+	read x
+	y := ++x
+	write y
+	write x
+	y := x++
+	write y
+	write x
+end
