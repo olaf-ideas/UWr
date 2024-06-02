@@ -1,0 +1,4 @@
+try
+	raise 5 + 5
+with
+x -> x * x

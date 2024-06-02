@@ -1,0 +1,13 @@
+var x
+begin
+	try
+	begin
+		write 2
+		raise
+		write 3
+	end
+	with
+	begin
+		write 4
+	end
+end

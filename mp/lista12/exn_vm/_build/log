@@ -1,0 +1,16 @@
+# dune exec exn example2.exn -- -use-vm
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /home/olaf/.cache/dune/db
+# Workspace root: /home/olaf/uwr/UWr/mp/lista12/exn_vm
+# Auto-detected concurrency: 8
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /home/olaf/.opam/default/bin/ocamlc.opt -config > /tmp/dune_e7ca63_output

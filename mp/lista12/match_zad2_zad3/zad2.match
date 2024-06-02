@@ -1,0 +1,14 @@
+let even = fix (fun even -> fun xs ->
+  match xs with
+  | Nil() -> true
+  | Cons(_, Nil()) -> false
+  | Cons(_, Cons(_, xs)) -> even xs
+  end) in
+
+let map = fix (fun map -> fun f -> fun xs ->
+  match xs with
+  | Nil() -> Nil()
+  | Cons(x, xs) -> Cons(f x, map f xs)
+  end) in
+
+map (fun x -> 2 * x) (Cons(-2, Cons(3, Cons(-1, Nil()))))

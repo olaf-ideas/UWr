@@ -1,0 +1,23 @@
+# dune build
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /home/olaf/.cache/dune/db
+# Workspace root: /home/olaf/uwr/UWr/mp/lista12/match
+# Auto-detected concurrency: 8
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /home/olaf/.opam/default/bin/ocamlc.opt -config > /tmp/dune_660c9b_output
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamldep.opt -modules -impl src/eval.ml) > _build/default/src/.match.eobjs/dune__exe__Eval.impl.d
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.match.eobjs/byte -no-alias-deps -opaque -open Dune__exe -o src/.match.eobjs/byte/dune__exe__Eval.cmo -c -impl src/eval.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.match.eobjs/byte -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.match.eobjs/byte/dune__exe__Match.cmo -c -impl src/match.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.match.eobjs/byte -I src/.match.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.match.eobjs/native/dune__exe__Match.cmx -c -impl src/match.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.match.eobjs/byte -I src/.match.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.match.eobjs/native/dune__exe__Eval.cmx -c -impl src/eval.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o src/match.bc src/.match.eobjs/byte/dune__exe.cmo src/.match.eobjs/byte/dune__exe__Ast.cmo src/.match.eobjs/byte/dune__exe__Eval.cmo src/.match.eobjs/byte/dune__exe__Parser.cmo src/.match.eobjs/byte/dune__exe__Lexer.cmo src/.match.eobjs/byte/dune__exe__FunStd.cmo src/.match.eobjs/byte/dune__exe__Match.cmo)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o src/match.exe src/.match.eobjs/native/dune__exe.cmx src/.match.eobjs/native/dune__exe__Ast.cmx src/.match.eobjs/native/dune__exe__Eval.cmx src/.match.eobjs/native/dune__exe__Parser.cmx src/.match.eobjs/native/dune__exe__Lexer.cmx src/.match.eobjs/native/dune__exe__FunStd.cmx src/.match.eobjs/native/dune__exe__Match.cmx)

@@ -1,0 +1,49 @@
+let even = fix (fun even -> fun xs ->
+  match xs with
+  | Nil() -> true
+  | Cons(_, Nil()) -> false
+  | Cons(_, Cons(_, xs)) -> even xs
+  end) in
+
+let map = fix (fun map -> fun f -> fun xs ->
+  match xs with
+  | Nil() -> Nil()
+  | Cons(x, xs) -> Cons(f x, map f xs)
+  end) in
+
+let append = fix (fun append -> fun l0 -> fun l1 ->
+  match l0 with
+  | Nil() -> l1
+  | Cons(x, l0) -> Cons(x, append l0 l1)
+  end) in
+
+let insert = fix (fun insert -> fun t -> fun v ->
+  match t with
+  | Node(l, w, r) -> 
+  	if v < w then Node(insert l v, w, r)
+	else          Node(l, w, insert r v)
+  | Leaf() -> Node(Leaf(), v, Leaf())
+  end) in
+
+let flatten = fix (fun flatten -> fun t ->
+  match t with
+  | Node(l, v, r) -> append (flatten l) (Cons(v, flatten r))
+  | Leaf() -> Nil()
+  end) in
+
+let build_tree = fix (fun build_tree -> fun l ->
+  match l with
+  | Cons(v, l) -> insert (build_tree l) v
+  | Nil() -> Leaf()
+  end) in
+
+let generate_list = fix (fun generate_list -> fun n -> fun seed ->
+  if n > 0 then Cons(seed, generate_list (n - 1) (mod (seed * 1433) 2137))
+  else          Nil()
+  ) in
+
+let sort = fun l -> flatten (build_tree l) in
+
+let my_list = generate_list 10 21 in
+let my_sorted_list = sort my_list in
+my_sorted_list
