@@ -1,4 +1,4 @@
-# dune exec inf -- -dump func3_test.inf
+# dune exec inf -- -dump test2.inf
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Shared cache location: /home/olaf/.cache/dune/db
@@ -13,4 +13,4 @@
 #  ; build_dir = In_build_dir "default"
 #  ; instrument_with = []
 #  }
-$ /home/olaf/.opam/default/bin/ocamlc.opt -config > /tmp/dune_8ec5a2_output
+$ /home/olaf/.opam/default/bin/ocamlc.opt -config > /tmp/dune_a44708_output

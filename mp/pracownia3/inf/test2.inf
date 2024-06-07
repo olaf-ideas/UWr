@@ -1,0 +1,15 @@
+function foo(x)
+	function bar(x)
+		function baz(x)
+		begin
+		x := x - 1
+		if x = 0 then return 2
+		else return bar(x) + foo(x) + baz(x)
+		end
+	return baz(x)
+return bar(x)
+
+function baz(x)
+	return foo(1)
+
+write foo(2)

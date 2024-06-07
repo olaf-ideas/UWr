@@ -78,43 +78,54 @@ let rec add_leave_at_return (local_vars : var list) (cmds : cmd list) : cmd list
   | RET :: cmds -> [LEAVE (List.length local_vars); RET] @ add_leave_at_return local_vars cmds
   | c :: cmds -> c :: add_leave_at_return local_vars cmds
 
-let rec compile_funs (env : var option list) (dict : name * name list) (funs : func list) : (name * cmd list) * list =
+let rec print_dict (dict : (name * name) list) =
+  match dict with
+  | (a, b) :: dict -> Printf.printf "%s %s\n" a b; print_dict dict
+  | _ -> ()
+
+let rec print_local_funs local_funs =
+  match local_funs with
+  | Func (name, _, _, _, _) :: local_funs -> 
+    Printf.printf "%s " name; print_local_funs local_funs
+  | _ -> Printf.printf "\n"
+
+let rec apply_renaming (dict : (name * name) list) (cmds : cmd list) : cmd list =
+  match cmds with
+  | [] -> []
+  | CALL f :: cmds ->
+    (match List.assoc_opt f dict with
+    | Some h -> Printf.printf "In dict %s -> %s\n" f h; print_dict dict; CALL h
+    | None   -> Printf.printf "Not in dict %s\nDict:" f; print_dict dict; CALL f) :: apply_renaming dict cmds
+  | WHILE (c1, c2) :: cmds ->
+    WHILE(apply_renaming dict c1, apply_renaming dict c2) :: apply_renaming dict cmds
+  | BRANCH (c1, c2) :: cmds ->
+    BRANCH (apply_renaming dict c1, apply_renaming dict c2) :: apply_renaming dict cmds
+  | c :: cmds -> c :: apply_renaming dict cmds
+
+let rec add_prefix_to_funs (prefix : name) (funs : func list) : (func list) =
+  match funs with
+  | [] -> []
+  | Func (name, args, local_vars, local_funs, body) :: funs ->
+    Func (prefix ^ name, args, local_vars, local_funs, body) :: add_prefix_to_funs prefix funs
+
+let rec compile_funs (env : var option list) (dict : (name * name) list) (funs : func list) : (name * cmd list) list =
   match funs with
   | [] -> []
   | Func (name, args, local_vars, local_funs, body) :: funs ->
     let env = (List.map Option.some local_vars) @ [None] @ (List.rev (List.map Option.some args)) @ env in
-    let func_code = compile_stmt env body in
-    let func_code = [ENTER (List.legnth local_vars)] @ func_code in
-    let func_code = add_leave_at_return (List.length local_vars) func_code in
+    let new_dict = dict @ (List.map (fun (Func (fun_name, _, _, _, _)) -> (fun_name, name ^ "_" ^ fun_name)) local_funs) in
+    Printf.printf "Old dict:\n"; print_dict dict;
+    Printf.printf "New dict:\n"; print_dict new_dict;
+    Printf.printf "Local funs: "; print_local_funs local_funs;
+    let local_funs = add_prefix_to_funs (name ^ "_") local_funs in
+    let fun_code = compile_stmt env body in
+    let fun_code = [ENTER (List.length local_vars)] @ fun_code @ [RET] in
+    let fun_code = add_leave_at_return local_vars fun_code in
+    let fun_code = apply_renaming new_dict fun_code in
+    (name, fun_code) :: compile_funs env new_dict local_funs @ compile_funs env dict funs
 
-    (match List.assq_opt name dict with
-    | Some new_name -> (new_name, func_code)
-    | None          -> (    name, func_code))
-      :: compile_funs env new_dict local_funs @ compile_funs env dict funcs
-
-(* local funcs are not used for now*)
-let rec compile_func (env : var option list) (Func (name, args, local_vars, local_funs, body) : func) : (name * cmd list) list = 
-  let rename_local_func = fun (Func (func_name, args, local_vars, local_funs, body)) -> Func (name ^ "_" ^ func_name, args, local_vars, local_funs, body) in
-  let compiled_local_funcs = List.concat (List.map (compile_func env) (List.map rename_local_func local_funs)) in
-  let env = (List.map Option.some local_vars) @ [None] @ (List.rev (List.map Option.some args)) @ env in
-  let rec rename_local_func_calls cmds : cmd list =
-    match cmds with
-    | [] -> []
-    | CALL f :: cmds ->
-      (match List.find_opt (fun (Func (h, _, _, _, _)) -> h = f) local_funs with
-      | Some _ -> CALL (name ^ "_" ^ f)
-      | None   -> CALL f) :: cmds
-    | c :: cmds -> c :: rename_local_func_calls cmds in
-    let func_body = rename_local_func_calls (compile_stmt env body) in
-    let rec delete_local_vars cmds : cmd list =
-    match cmds with
-    | [] -> []
-    | RET :: cmds -> [LEAVE (List.length local_vars); RET] @ delete_local_vars cmds
-    | c :: cmds -> c :: delete_local_vars cmds in
-  (name, [ENTER (List.length local_vars)] @ (delete_local_vars func_body)) :: compiled_local_funcs
-
-let compile_prog ((vars, funcs, main_stmt) : prog) : vm_prog =
+let compile_prog ((vars, funs, main_stmt) : prog) : vm_prog =
   let env = List.map Option.some vars in
-  let compiled_funcs = List.concat (List.map (compile_func env) funcs) in
+  let compiled_funcs = compile_funs env [] funs in
   let main_code = compile_stmt env main_stmt in
   ([ENTER (List.length vars)] @ main_code @ [LEAVE (List.length vars)], compiled_funcs)
