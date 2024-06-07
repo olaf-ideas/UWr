@@ -1,0 +1,11 @@
+var x
+
+function foo()
+	function bar()
+		return x
+	return bar()
+
+begin
+	x := 1
+	write foo()
+end
