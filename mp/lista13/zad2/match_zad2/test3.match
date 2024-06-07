@@ -1,0 +1,5 @@
+match (Cons(3, Nil())) with
+| Nil() -> true
+| Cons(_, Nil()) -> false
+| Cons(_, Cons(_, xs)) -> 3
+end

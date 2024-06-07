@@ -1,0 +1,5 @@
+match (Nil()) with
+| Cons(_, _) -> 1
+| Nil() -> 2
+| Cons(1, _) -> 3
+end

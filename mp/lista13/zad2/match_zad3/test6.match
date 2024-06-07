@@ -1,0 +1,5 @@
+let x = 42 in
+match (13, 13) with
+| (x, (y)) when y = x -> 1
+| _ -> 2
+end
