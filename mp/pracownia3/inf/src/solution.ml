@@ -115,7 +115,6 @@ let rec compile_funs (env : var option list) (dict : (name * name) list) (funs :
   match funs with
   | [] -> []
   | Func (name, args, local_vars, local_funs, body) :: funs ->
-    let dict = (name, name) :: dict in
     let new_env = 
       [Some ("stack_pointer:" ^ name)] @ 
       (List.map Option.some local_vars) @ 
@@ -123,7 +122,7 @@ let rec compile_funs (env : var option list) (dict : (name * name) list) (funs :
       (List.rev (List.map Option.some args)) @ 
       env
     in
-    let new_dict = dict @ (List.map (fun f -> (get_fun_name f, name ^ "_" ^ get_fun_name f)) local_funs) in
+    let new_dict = (List.map (fun f -> (get_fun_name f, name ^ "_" ^ get_fun_name f)) local_funs) @ dict in
     let local_funs = add_prefix_to_funs (name ^ "_") local_funs in
     let fun_code = compile_stmt new_env new_dict body in
     let fun_code = [ENTER (List.length local_vars); TOP; PUSH] @ fun_code @ [RET] in
@@ -143,6 +142,6 @@ let compile_prog ((vars, funs, main_stmt) : prog) : vm_prog =
   let env = [Some "stack_pointer:main"] @ List.map Option.some vars in
   let dict = List.map (fun f -> (get_fun_name f, get_fun_name f)) funs in
   create_father_dict "main" funs;
-  let compiled_funs = compile_funs env [] funs in
+  let compiled_funs = compile_funs env dict funs in
   let main_code = compile_stmt env dict main_stmt in
   ([ENTER (List.length vars); TOP; PUSH] @ main_code @ [LEAVE (List.length vars + 1)], compiled_funs)

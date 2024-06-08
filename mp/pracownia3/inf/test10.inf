@@ -1,0 +1,48 @@
+var x
+var y
+var z
+
+function bor(y, z)
+begin
+    x := y + z
+    return x + z
+end
+
+function baz(a, b)
+begin
+    if (x - (x / 2) * 2) = 0 
+    then
+        y := y + z * a
+    else
+        y := y - z * b
+    return x * y * a * b
+end
+
+function foo(x, y, w)
+    function bar(a, b, c)
+        function baz(x, y)
+        begin
+            y := y + bor(x, y)
+            return y - 2 * x
+        end
+        return 2 * baz(b, c + a)
+begin
+    x := x - y
+    while (x < y) do
+    begin
+            x := x + 1
+            w := w * 2 + z
+            z := z + 3
+            z := z + baz(x, w) + bar(x, y, w)
+    end
+    return x * y * w
+end
+
+begin
+    x := 5
+    read y
+    read z
+    y := z + y
+    z := foo(x, y, 5 * 5 + y)
+    write z + y
+end
