@@ -1,4 +1,4 @@
-# dune exec inf -- -dump -vm=precise test1.inf
+# dune exec inf -- -dump -vm=fast test9.inf
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Shared cache location: /home/olaf/.cache/dune/db
@@ -13,4 +13,4 @@
 #  ; build_dir = In_build_dir "default"
 #  ; instrument_with = []
 #  }
-$ /home/olaf/.opam/default/bin/ocamlc.opt -config > /tmp/dune_1c1888_output
+$ /home/olaf/.opam/default/bin/ocamlc.opt -config > /tmp/dune_647608_output
