@@ -1,0 +1,14 @@
+var x
+var n
+
+function incr_x(y)
+begin
+	x := x + y
+	return x
+end
+
+begin
+	x := 0
+	read n
+	write incr_x(n)
+end

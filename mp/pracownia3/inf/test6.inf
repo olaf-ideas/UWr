@@ -1,0 +1,9 @@
+function foo(x)
+begin
+	if x = 3 then
+		return 1
+	else
+		return 2
+end
+
+write foo(1)
