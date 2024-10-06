@@ -1,0 +1,7 @@
+lib: [
+  "_build/install/default/lib/rec/META"
+  "_build/install/default/lib/rec/dune-package"
+]
+bin: [
+  "_build/install/default/bin/rec"
+]

@@ -1,0 +1,25 @@
+# dune build
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /home/kiri/.cache/dune/db
+# Workspace root: /home/kiri/university/metodyp/lista14/zad345
+# Auto-detected concurrency: 6
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; installed_env =
+#      map
+#        { "INSIDE_DUNE" :
+#            "/home/kiri/university/metodyp/lista14/zad345/_build/default"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; instrument_with = []
+#  }
+$ /home/kiri/.opam/default/bin/ocamlc.opt -config > /tmp/dune_21fd61_output
+$ (cd _build/default && /home/kiri/.opam/default/bin/ocamlc.opt -w +9 -g -bin-annot -I src/.simple.eobjs/byte -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.simple.eobjs/byte/dune__exe__Simple.cmo -c -impl src/simple.ml)
+$ (cd _build/default && /home/kiri/.opam/default/bin/ocamlc.opt -w +9 -g -o src/simple.bc src/.simple.eobjs/byte/dune__exe.cmo src/.simple.eobjs/byte/dune__exe__Ast.cmo src/.simple.eobjs/byte/dune__exe__Eval.cmo src/.simple.eobjs/byte/dune__exe__Parser.cmo src/.simple.eobjs/byte/dune__exe__Lexer.cmo src/.simple.eobjs/byte/dune__exe__TypeCheck.cmo src/.simple.eobjs/byte/dune__exe__Simple.cmo)

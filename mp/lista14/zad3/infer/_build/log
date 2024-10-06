@@ -1,0 +1,34 @@
+# dune build
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /home/olaf/.cache/dune/db
+# Workspace root: /home/olaf/uwr/UWr/mp/lista14/zad3/infer
+# Auto-detected concurrency: 8
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /home/olaf/.opam/default/bin/ocamlc.opt -config > /tmp/dune_67b42a_output
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamldep.opt -modules -impl src/ast.ml) > _build/default/src/.infer.eobjs/dune__exe__Ast.impl.d
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamldep.opt -modules -impl src/typeCheck.ml) > _build/default/src/.infer.eobjs/dune__exe__TypeCheck.impl.d
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w +9 -g -bin-annot -I src/.infer.eobjs/byte -no-alias-deps -opaque -open Dune__exe -o src/.infer.eobjs/byte/dune__exe__Ast.cmo -c -impl src/ast.ml)
+$ (cd _build/.sandbox/d3e0821ab483573bec91b1c1ee75cbce/default && /home/olaf/.opam/default/bin/ocamlc.opt -w +9 -g -I src/.infer.eobjs/byte -open Dune__exe -short-paths -i -impl src/parser__mock.ml.mock) > _build/.sandbox/d3e0821ab483573bec91b1c1ee75cbce/default/src/parser__mock.mli.inferred
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w +9 -g -bin-annot -I src/.infer.eobjs/byte -no-alias-deps -opaque -open Dune__exe -o src/.infer.eobjs/byte/dune__exe__Parser.cmi -c -intf src/parser.mli)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w +9 -g -bin-annot -I src/.infer.eobjs/byte -no-alias-deps -opaque -open Dune__exe -o src/.infer.eobjs/byte/dune__exe__TypeCheck.cmo -c -impl src/typeCheck.ml)
+> File "src/typeCheck.ml", line 94, characters 4-15:
+> 94 |     t_exception
+>          ^^^^^^^^^^^
+> Error: Unbound value t_exception
+[2]
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlopt.opt -w +9 -g -I src/.infer.eobjs/byte -I src/.infer.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.infer.eobjs/native/dune__exe__Ast.cmx -c -impl src/ast.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w +9 -g -bin-annot -I src/.infer.eobjs/byte -no-alias-deps -opaque -open Dune__exe -o src/.infer.eobjs/byte/dune__exe__Eval.cmo -c -impl src/eval.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w +9 -g -bin-annot -I src/.infer.eobjs/byte -no-alias-deps -opaque -open Dune__exe -o src/.infer.eobjs/byte/dune__exe__Lexer.cmo -c -impl src/lexer.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlopt.opt -w +9 -g -I src/.infer.eobjs/byte -I src/.infer.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.infer.eobjs/native/dune__exe__Lexer.cmx -c -impl src/lexer.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlopt.opt -w +9 -g -I src/.infer.eobjs/byte -I src/.infer.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.infer.eobjs/native/dune__exe__Eval.cmx -c -impl src/eval.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w +9 -g -bin-annot -I src/.infer.eobjs/byte -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.infer.eobjs/byte/dune__exe__Parser.cmo -c -impl src/parser.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlopt.opt -w +9 -g -I src/.infer.eobjs/byte -I src/.infer.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.infer.eobjs/native/dune__exe__Parser.cmx -c -impl src/parser.ml)

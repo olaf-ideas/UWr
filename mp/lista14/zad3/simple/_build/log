@@ -1,0 +1,62 @@
+# dune build
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /home/olaf/.cache/dune/db
+# Workspace root: /home/olaf/uwr/UWr/mp/lista14/zad3/simple
+# Auto-detected concurrency: 8
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /home/olaf/.opam/default/bin/ocamlc.opt -config > /tmp/dune_00521f_output
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamldep.opt -modules -impl src/ast.ml) > _build/default/src/.simple.eobjs/dune__exe__Ast.impl.d
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamldep.opt -modules -impl src/typeCheck.ml) > _build/default/src/.simple.eobjs/dune__exe__TypeCheck.impl.d
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w +9 -g -bin-annot -I src/.simple.eobjs/byte -no-alias-deps -opaque -open Dune__exe -o src/.simple.eobjs/byte/dune__exe__Ast.cmo -c -impl src/ast.ml)
+$ (cd _build/.sandbox/ccf42ae162961189971920dd8726a761/default && /home/olaf/.opam/default/bin/ocamlc.opt -w +9 -g -I src/.simple.eobjs/byte -open Dune__exe -short-paths -i -impl src/parser__mock.ml.mock) > _build/.sandbox/ccf42ae162961189971920dd8726a761/default/src/parser__mock.mli.inferred
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w +9 -g -bin-annot -I src/.simple.eobjs/byte -no-alias-deps -opaque -open Dune__exe -o src/.simple.eobjs/byte/dune__exe__Parser.cmi -c -intf src/parser.mli)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w +9 -g -bin-annot -I src/.simple.eobjs/byte -no-alias-deps -opaque -open Dune__exe -o src/.simple.eobjs/byte/dune__exe__TypeCheck.cmo -c -impl src/typeCheck.ml)
+> File "src/typeCheck.ml", lines 12-57, characters 2-33:
+> 12 | ..match e with
+> 13 |   | Unit   -> TUnit
+> 14 |   | Int  _ -> TInt
+> 15 |   | Bool _ -> TBool
+> 16 |   | Var  x ->
+> ...
+> 54 |   | Snd e ->
+> 55 |     (match infer_type env e with
+> 56 |     | TArr (_, tp) -> tp
+> 57 |     | _ -> failwith "type error")
+> Warning 8 [partial-match]: this pattern-matching is not exhaustive.
+> Here is an example of a case that is not matched:
+> (Raise|LetRec (_, _)|Try (_, _))
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w +9 -g -bin-annot -I src/.simple.eobjs/byte -no-alias-deps -opaque -open Dune__exe -o src/.simple.eobjs/byte/dune__exe__Eval.cmo -c -impl src/eval.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w +9 -g -bin-annot -I src/.simple.eobjs/byte -no-alias-deps -opaque -open Dune__exe -o src/.simple.eobjs/byte/dune__exe__Lexer.cmo -c -impl src/lexer.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w +9 -g -bin-annot -I src/.simple.eobjs/byte -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.simple.eobjs/byte/dune__exe__Simple.cmo -c -impl src/simple.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlopt.opt -w +9 -g -I src/.simple.eobjs/byte -I src/.simple.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.simple.eobjs/native/dune__exe__Ast.cmx -c -impl src/ast.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlopt.opt -w +9 -g -I src/.simple.eobjs/byte -I src/.simple.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.simple.eobjs/native/dune__exe__Lexer.cmx -c -impl src/lexer.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlopt.opt -w +9 -g -I src/.simple.eobjs/byte -I src/.simple.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.simple.eobjs/native/dune__exe__Simple.cmx -c -impl src/simple.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlopt.opt -w +9 -g -I src/.simple.eobjs/byte -I src/.simple.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.simple.eobjs/native/dune__exe__TypeCheck.cmx -c -impl src/typeCheck.ml)
+> File "src/typeCheck.ml", lines 12-57, characters 2-33:
+> 12 | ..match e with
+> 13 |   | Unit   -> TUnit
+> 14 |   | Int  _ -> TInt
+> 15 |   | Bool _ -> TBool
+> 16 |   | Var  x ->
+> ...
+> 54 |   | Snd e ->
+> 55 |     (match infer_type env e with
+> 56 |     | TArr (_, tp) -> tp
+> 57 |     | _ -> failwith "type error")
+> Warning 8 [partial-match]: this pattern-matching is not exhaustive.
+> Here is an example of a case that is not matched:
+> (Raise|LetRec (_, _)|Try (_, _))
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlopt.opt -w +9 -g -I src/.simple.eobjs/byte -I src/.simple.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.simple.eobjs/native/dune__exe__Eval.cmx -c -impl src/eval.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w +9 -g -bin-annot -I src/.simple.eobjs/byte -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.simple.eobjs/byte/dune__exe__Parser.cmo -c -impl src/parser.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlopt.opt -w +9 -g -I src/.simple.eobjs/byte -I src/.simple.eobjs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o src/.simple.eobjs/native/dune__exe__Parser.cmx -c -impl src/parser.ml)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlc.opt -w +9 -g -o src/simple.bc src/.simple.eobjs/byte/dune__exe.cmo src/.simple.eobjs/byte/dune__exe__Ast.cmo src/.simple.eobjs/byte/dune__exe__Eval.cmo src/.simple.eobjs/byte/dune__exe__Parser.cmo src/.simple.eobjs/byte/dune__exe__Lexer.cmo src/.simple.eobjs/byte/dune__exe__TypeCheck.cmo src/.simple.eobjs/byte/dune__exe__Simple.cmo)
+$ (cd _build/default && /home/olaf/.opam/default/bin/ocamlopt.opt -w +9 -g -o src/simple.exe src/.simple.eobjs/native/dune__exe.cmx src/.simple.eobjs/native/dune__exe__Ast.cmx src/.simple.eobjs/native/dune__exe__Eval.cmx src/.simple.eobjs/native/dune__exe__Parser.cmx src/.simple.eobjs/native/dune__exe__Lexer.cmx src/.simple.eobjs/native/dune__exe__TypeCheck.cmx src/.simple.eobjs/native/dune__exe__Simple.cmx)

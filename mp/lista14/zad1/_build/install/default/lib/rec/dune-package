@@ -1,0 +1,4 @@
+(lang dune 3.14)
+(name rec)
+(sections (lib .) (bin ../../bin))
+(files (lib (META dune-package)) (bin (rec)))

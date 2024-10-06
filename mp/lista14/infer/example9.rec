@@ -1,0 +1,4 @@
+let rec sus2 = fun x -> sus x
+and sus = fun x -> if x = 0 then 42 else (sus2 (x - 1)) = 42 
+in
+sus 4

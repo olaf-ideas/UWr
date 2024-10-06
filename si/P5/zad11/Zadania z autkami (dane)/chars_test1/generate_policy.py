@@ -71,10 +71,8 @@ for rep in range(10000):
                 
                 # print(next_state)
                 nx, ny, nvx, nvy = next_state
-                
+
                 if 0 <= nx < rows and 0 <= ny < cols:
-                    # print(nx, ny, nvx, nvy, rows, cols)
-                    
                     if track[nx][ny] == '.':
                         reward = -100
                     elif track[nx][ny] == 'e':
@@ -83,8 +81,10 @@ for rep in range(10000):
                         reward = -1
                     
                     # print(reward, x, y, vx, vy, "=>", nx, ny, nvx, nvy)
-                    
+                
                     action_v += reward + GAMMA * V[nx, ny, nvx + 3, nvy + 3]
+                else:
+                    action_v += -100
 
             action_v /= len(next_states)
 
@@ -108,7 +108,7 @@ for rep in range(10000):
     
     print(rep, "delta:", delta, "changes:", move_changes)
     
-    if delta < 1e-9:
+    if delta < 1e-12 and move_changes == 0:
         break
     # for x in range(rows):
     #     for y in range(cols):

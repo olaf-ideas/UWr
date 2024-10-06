@@ -138,7 +138,7 @@ should_be = {
 
 show_track(B)
 
-R = 20
+R = 10000
 U = []
 for runs in range(R):
     x,y = start
@@ -199,5 +199,5 @@ else:
 
 # img.save("output.png")
 # # Display the turtle screen
-#done()    
-#input()
+done()    
+input()
