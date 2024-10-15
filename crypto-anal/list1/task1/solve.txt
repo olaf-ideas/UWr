@@ -1,0 +1,91 @@
+a) Szyfr Cezara
+
+E(n(P, K)) = |S|/|P|*(|K| - 1)
+
+|S| = 2**(1.2m)
+|P| = 26**m
+|K| = 26
+
+(2**1.2 / 26) ** m * (26 - 1) < 1
+m > log(1/25) / log(2**1.2 / 26) ~ 1.3266493822784193
+m >= 2
+
+b) Monoalfabetyczny szyfr podstawieniowy
+
+|S| = 2**(1.2m)
+|P| = 26**m
+|K| = 26!
+
+E(n(P, K)) < 1 
+<=>
+(2**1.2 / 26) ** m * (26! - 1) < 1
+
+m > log(1 / (26! - 1)) / log(2**1.2 / 26)
+m > 25.248814561489286
+m >= 26
+
+c) Szyfr k-kolumnowy przestawieniowy
+
+|S| = 2**(1.2m)
+|P| = 26**m
+|K| = 26**k
+
+dla duzych k
+
+m > k * log(1 / 26) / log(2**1.2 / 26) ~ k * 1.3428140738379177
+
+d) Szyfr Vigenera
+
+|S| = 2^(1.2m)
+|P| = 26^m
+|K| = (26^m - 1) / (26 - 1)
+
+(2^(1.2 * m)) / (26^m) * ((26^m - 1) / (26 - 1) - 1) < 1
+
+jak sie wklei do wolfram alpha
+
+m < 3.86998
+
+e) Szyfr one-time pad
+
+|K| = 26^m
+
+(2^(1.2 * m)) / (26^m) * (26^m - 1) < 1
+
+jak sie wklei do wolfram alpha
+
+m < 0.39239
+wiec w sumie nie ma takiego m
+
+------
+
+unicity distance dla US-ASCII:
+
+(2**(1.2 - 7))**m * (2**56 - 1) < 1   m > 9.655172413793103
+(2**(1.2 - 7))**m * (2**64 - 1) < 1   m > 11.03448275862069
+(2**(1.2 - 7))**m * (2**128 - 1) < 1  m > 22.06896551724138
+(2**(1.2 - 7))**m * (2**192 - 1) < 1  m > 33.10344827586207
+(2**(1.2 - 7))**m * (2**256 - 1) < 1  m > 44.13793103448276
+
+Przeiteruj sie po kluczach i sprawdz czy na 8-tych bitach sa 0 (a) lub odpowiadajaca check suma (b).
+Potem dopiero sprawdzac czy slowa istnieja w slowniku, w (b) sprawdzenie bedzie znacznie lepsze.
+
+------
+
+k -> ile bitow w kluczu
+n -> ile bajtow zer
+2**(-8 * n) * (2^k - 1) < 1
+
+approx: n > k / 8
+
+------
+
+O tekscie musimy wiedziec choc eps informacji bo inaczej
+nigdy nie znajdziemy takiego m ze E(n(p, k)) < 1.
+
+W wiekszosci przypadkow wiemy chocby ze ósmy bit nie ma znaczenia w txt,
+a dla binarek, że większość kodu to 0 itp.
+
+------
+
+Kompresja nie może zmniejszyć entropi tekstu jawnego
