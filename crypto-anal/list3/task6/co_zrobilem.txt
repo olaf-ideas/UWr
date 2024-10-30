@@ -1,0 +1,127 @@
+.\scallion.exe --gpg 598950B2$
+-> wyplulo klucz
+olaf@laptop:~/uwr/UWr/crypto-anal/list3/task6$ gpg --import --allow-non-selfsigned-uid klucz
+gpg: key 942B2F797E1C10E9: accepted non self-signed user ID "Scallion UID (replace me)"
+gpg: key 942B2F797E1C10E9: public key "Scallion UID (replace me)" imported
+gpg: key 942B2F797E1C10E9: secret key imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+gpg:       secret keys read: 1
+gpg:   secret keys imported: 1
+
+-> zmieniamy user id
+
+olaf@laptop:~/uwr/UWr/crypto-anal/list3/task6$ gpg --edit-key 598950B2
+
+-> uzywanie adduid oraz deluid aby zmienic stary na 3 nowe
+
+gpg (GnuPG) 2.2.40; Copyright (C) 2022 g10 Code GmbH
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Secret key is available.
+
+sec  rsa1024/C241F846598950B2
+     created: 2024-10-29  expires: never       usage: SCEA
+     trust: unknown       validity: unknown
+[ unknown] (1). Scallion UID (replace me)
+
+gpg> adduid
+Real name: Piotr Polesiuk
+Email address: ppolesiuk@cs.uni.wroc.pl
+Comment: 
+You selected this USER-ID:
+    "Piotr Polesiuk <ppolesiuk@cs.uni.wroc.pl>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+
+sec  rsa1024/C241F846598950B2
+     created: 2024-10-29  expires: never       usage: SCEA
+     trust: unknown       validity: unknown
+[ unknown] (1). Scallion UID (replace me)
+[ unknown] (2). Piotr Polesiuk <ppolesiuk@cs.uni.wroc.pl>
+
+gpg> adduid
+Real name: Piotr Polesiuk
+Email address: Piotr.Polesiuk@cs.uni.wroc.pl
+Comment: 
+You selected this USER-ID:
+    "Piotr Polesiuk <Piotr.Polesiuk@cs.uni.wroc.pl>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+
+sec  rsa1024/C241F846598950B2
+     created: 2024-10-29  expires: never       usage: SCEA
+     trust: unknown       validity: unknown
+[ unknown] (1). Scallion UID (replace me)
+[ unknown] (2)  Piotr Polesiuk <ppolesiuk@cs.uni.wroc.pl>
+[ unknown] (3). Piotr Polesiuk <Piotr.Polesiuk@cs.uni.wroc.pl>
+
+gpg> adduid
+Real name: Piotr Polesiuk
+Email address: piotr.polesiuk@gmail.com
+Comment: 
+You selected this USER-ID:
+    "Piotr Polesiuk <piotr.polesiuk@gmail.com>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+
+sec  rsa1024/C241F846598950B2
+     created: 2024-10-29  expires: never       usage: SCEA
+     trust: unknown       validity: unknown
+[ unknown] (1). Scallion UID (replace me)
+[ unknown] (2)  Piotr Polesiuk <ppolesiuk@cs.uni.wroc.pl>
+[ unknown] (3)  Piotr Polesiuk <Piotr.Polesiuk@cs.uni.wroc.pl>
+[ unknown] (4). Piotr Polesiuk <piotr.polesiuk@gmail.com>
+
+gpg> deluid 1
+You must select at least one user ID.
+(Use the 'uid' command.)
+
+gpg> uid 1
+
+sec  rsa1024/C241F846598950B2
+     created: 2024-10-29  expires: never       usage: SCEA
+     trust: unknown       validity: unknown
+[ unknown] (1)* Scallion UID (replace me)
+[ unknown] (2)  Piotr Polesiuk <ppolesiuk@cs.uni.wroc.pl>
+[ unknown] (3)  Piotr Polesiuk <Piotr.Polesiuk@cs.uni.wroc.pl>
+[ unknown] (4). Piotr Polesiuk <piotr.polesiuk@gmail.com>
+
+gpg> deluid 1
+Really remove this user ID? (y/N) y
+
+sec  rsa1024/C241F846598950B2
+     created: 2024-10-29  expires: never       usage: SCEA
+     trust: unknown       validity: unknown
+[ unknown] (1)  Piotr Polesiuk <ppolesiuk@cs.uni.wroc.pl>
+[ unknown] (2)  Piotr Polesiuk <Piotr.Polesiuk@cs.uni.wroc.pl>
+[ unknown] (3). Piotr Polesiuk <piotr.polesiuk@gmail.com>
+
+gpg> save
+
+
+gpg> adduid
+Real name: Piotr Polesiuk
+Email address: piotr.polesiuk@gmail.com
+Comment: 
+You selected this USER-ID:
+    "Piotr Polesiuk <piotr.polesiuk@gmail.com>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+
+sec  rsa1024/942B2F797E1C10E9
+     created: 2024-10-29  expires: never       usage: SCEA
+     trust: unknown       validity: unknown
+[ unknown] (1)  Piotr Polesiuk <ppolesiuk@cs.uni.wroc.pl>
+[ unknown] (2)  Piotr Polesiuk <Piotr.Polesiuk@cs.uni.wroc.pl>
+[ unknown] (3). Piotr Polesiuk <piotr.polesiuk@gmail.com>
+
+gpg> save
+
+-> generowanie ascii armor that jak ten z keyserver.ubuntu.com
+gpg --armor --export 598950B2
+
+-> dla porownania
+gpg --import-options show-only --import hack.asc
+gpg --import-options show-only --import 351e9cc62053ba23a0c12cf7575cf393598950b2.asc

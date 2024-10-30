@@ -21,7 +21,6 @@ cipher = 'ŃABQYĆVLHĄOHQKĆNVODGQVŹŁFIXDWUJOZQNXŃNMRHZŹVSUJDFCWUFKRYĘSUÓ
 def negate(x):
 	return ''.join([num2char[-char2num[c] % alphalen] for c in x])
 
-# https://www.sttmedia.com/characterfrequency-polish
 frequency = {
 	'A':	8.37,
 	'Ą':	0.79,

@@ -4,7 +4,7 @@ for (let n = 1; n <= 100000; n++) {
 	let n_str = n.toString();
 	let sum = 0;
 	for (let i = 0; i < n_str.length; i++) {
-		let digit = n_str.charCodeAt(i) - '0'.charCodeAt();
+		let digit = Number(n_str[i]);
 		if (digit == 0 || n % digit != 0) {
 			ok = false;
 		}

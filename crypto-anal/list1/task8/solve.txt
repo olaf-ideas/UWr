@@ -1,0 +1,7 @@
+test Kasiskiego:
+
+Powiedzmy ze klucz jest dlugosci k.
+
+Jesli w tekscie wystepuja powtorzenia tego samego slowa na pozycjach i oraz j, takich ze i = j (mod k). to po zaaplikowaniu szyfrowania vigenera nadal beda miec takie same literki. Dzieki tej obserwacji jesli znajdziemy dwa powtorzenia tego samego slowa w tekscie (ale nie krotkiego) na pozycjach i oraz j to klucz z duzym prawdopodobienstwem dzielnikiem |i - j|. Znajdujac wszystkie takie wystapienia i biorac z nich nwd, mozna odgadnac dlugosc klucza.
+
+Nastepnie grupujac literki w grupy (i mod k), mozna przeprowadzic analize czestotliwosciowa i odgadnac ktore literki maja jaka szanse wystepowania.

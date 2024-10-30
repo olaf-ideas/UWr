@@ -1,0 +1,35 @@
+Starting with seed = 900883712268067515
+Found collision
+h(X) = 849153766475045023
+h(Y) = 849153766475045023
+<html>
+<head>
+<style type="text/css">
+   b { color: #448242; }
+   p { color: #3480a2; }
+   i { color: #e74700; }
+</style>
+</head>
+<body>
+<p>A</p>
+<b>B</b>
+<i>C</i>
+</body>
+</html>
+
+-----
+<html>
+<head>
+<style type="text/css">
+   b { color: #e3cfee; }
+   p { color: #e8ef80; }
+   i { color: #1fea00; }
+</style>
+</head>
+<body>
+<p>A</p>
+<b>B</b>
+<i>C</i>
+</body>
+</html>
+

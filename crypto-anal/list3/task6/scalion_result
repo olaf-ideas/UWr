@@ -1,0 +1,42 @@
+scallion-v2.0>.\scallion.exe --gpg 598950B2$
+Cooking up some delicions scallions...
+Using kernel optimized from file kernel.cl (Optimized4)
+Using work group size 64
+Compiling kernel... done.
+Testing SHA1 hash...
+CPU SHA-1: d3486ae9136e7856bc42212385ea797094475802
+GPU SHA-1: d3486ae9136e7856bc42212385ea797094475802
+Looks good!
+LoopIteration:335  HashCount:5620,37MH  Speed:614,0MH/s  Runtime:00:00:09  Predicted:00:00:03  Found new key! Found 1 unique keys.
+<XmlMatchOutput>
+  <GeneratedDate>2024-10-29T21:48:41.7527988Z</GeneratedDate>
+  <Hash>10073b7bd0b7197769a9508ec241f846598950b2</Hash>
+  <PrivateKey>-----BEGIN PGP PRIVATE KEY BLOCK-----
+Version: Scallion
+
+lQHZBGchWDYBBADajIh/m81+i7EmMefC4sP768QMfJg27XsbO5odcu+BMjPLRwjY5px1JxpkIzmcfU
+bDQQKBiN3vumxVhlgzNMssHhzTMZhOvcY73A+qaQUUKhB9mExBT8BZX15KoMtF4hzEzCIJRtQZxp0/
+fnr0Daa5BGzlwFfpJsrRcFbiNOE2iwAg5glZGQAD/j0Fu8vOky/VOqQVoxVpDs9Y5f66apcw+6ZYEu
+Nioe8nPAgLMqkWuJVzLJBsEu3mxC2zrCI2s52N0N1W7WfKZOHat2p+NUIxfGfqt2LWU2d9ZoubL0IY
+RfKY0D8hPWGtPA7rRQJXLAMG+71MtJ+FCgvzCputD6kakjsaOJWAVGkhAgDtJWIZf1JuNvscE/v4mN
+dEMprjuLC4OCirBNZa70W5uFOVTDgGUb3OIg/EHfRS9s2Y4hWxSWH8NIK11tYp2/63AgDr7KUlbeGI
+BqNs77AJTpKPOYomZ+ZiDl2tviJRU/SVDIDSR82b2PXGpuVoV6xhwG2Stsos7Y33d2ojzr0xPbLNAf
+4jhl5J13nbj91wUE/pikU9q28S8180khxs6h2zxOa5QuI/S/JH8IUbyyddIzPnJ9JADIOCrDrPSVMI
+ovAcueUMoAG0GVNjYWxsaW9uIFVJRCAocmVwbGFjZSBtZSk======
+-----END PGP PRIVATE KEY BLOCK-----
+</PrivateKey>
+  <PublicModulusBytes>2oyIf5vNfouxJjHnwuLD++vEDHyYNu17GzuaHXLvgTIzy0cI2OacdScaZCM5nH1Gw0ECgYjd77psVYZYMzTLLB4c0zGYTr3GO9wPqmkFFCoQfZhMQU/AWV9eSqDLReIcxMwiCUbUGcadP3569A2muQRs5cBX6SbK0XBW4jThNos=</PublicModulusBytes>
+  <PublicExponentBytes>5glZGQ==</PublicExponentBytes>
+</XmlMatchOutput>
+init: 856ms / 1 (856ms, 1,17/s)
+generate key: 1639ms / 11 (149ms, 6,71/s)
+cpu precompute: 11ms / 11 (1ms, 1000/s)
+total without init: 9795ms / 1 (9795ms, 0,1/s)
+set buffers: 5ms / 335 (0,01ms, 67000/s)
+write buffers: 9ms / 335 (0,03ms, 37222,22/s)
+read results: 8740ms / 335 (26,09ms, 38,33/s)
+check results: 635ms / 335 (1,9ms, 527,56/s)
+
+573,80 million hashes per second
+
+Stopping the GPU and shutting down...

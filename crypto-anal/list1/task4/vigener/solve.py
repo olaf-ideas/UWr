@@ -10,8 +10,6 @@ def encodeChar(c, k):
 def encode(plaintext, key):
 	return ''.join(map(encodeChar, plaintext, cycle(key)))
 
-#https://gist.github.com/pozhidaevak/0dca594d6f0de367f232909fe21cdb2f
-
 letterFrequency = {
 	'E' : 12.0,
 	'T' : 9.10,
