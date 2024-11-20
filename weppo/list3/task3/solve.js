@@ -2,9 +2,11 @@ function createFs(n) { // tworzy tablicę n funkcji
     var fs = []; // i-ta funkcja z tablicy ma zwrócić i
     for ( var i=0; i<n; i++ ) {
         fs[i] =
-            function() {
-                return i;
-            };
+            function(i) {
+                return function() {
+                    return i;
+                };
+            }(i);
     };
     return fs;
 }
@@ -18,4 +20,3 @@ console.log( myfs[7]() );
 
 // var jest uzywane przez wszystkie funkcje zdefiniowane w jego spektrum
 // wliczamy w takze myfs[2](), ktore bedzie uzywalo var jeszcze z funckji createFs
-//  

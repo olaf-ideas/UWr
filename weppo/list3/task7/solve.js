@@ -15,7 +15,7 @@ function fib() {
     }
 }
 
-function *fib_gen() {
+function* fib_gen() {
     let a = 0, b = 1;
     for (;;) {
         yield a;

@@ -16,11 +16,11 @@ krowa.robcos = function() {
 };
 
 Object.defineProperty(krowa, "wiek", {
-    get: function() {
+    get() {
         return this._wiek;
     },
 
-    set: function(ile) {
+    set(ile) {
         console.log("internal wiek setter");
         this._wiek = ile;
     }
