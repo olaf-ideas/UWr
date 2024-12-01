@@ -11,8 +11,7 @@ function processLogs(logFile) {
     });
 
     rl.on('line', (line) => {
-        const sliced = line.split(' ');
-        const ip = sliced[1];
+        const ip = line.split(' ')[1];
         
         if (ip in ips) {
             ips[ip] += 1;
