@@ -1,0 +1,22 @@
+[ req ]
+default_bits		= 4096
+default_keyfile		= crypto_example.key
+days				= 365
+distinguished_name	= req_crypto_example
+utf8				= yes
+prompt				= no
+req_extensions		= ext_crypto_example
+
+[ req_crypto_example ]
+countryName = PL
+stateOrProvinceName = Dolnoslaskie
+localityName = Wroclaw
+organizationName = Usługi Kryptograficzne Sp. z o.o.
+organizationalUnitName = Uslugi Kryptograficzne Root
+commonName = www.crypto.example
+emailAddress = root@crypto.example
+
+[ ext_crypto_example ]
+basicConstraints = CA:FALSE 
+keyUsage = critical, digitalSignature, keyEncipherment # https://docs.openssl.org/master/man5/x509v3_config/#key-usage
+

@@ -1,0 +1,22 @@
+[ req ]
+default_bits		= 4096
+default_keyfile		= weppo_exa.key
+days				= 365
+distinguished_name	= req_crypto_example
+utf8				= yes
+prompt				= no
+req_extensions		= ext_crypto_example
+
+[ req_crypto_example ]
+countryName = PL
+stateOrProvinceName = Dolnoslaskie
+localityName = Wroclaw
+organizationName = Weppo Sp. z o.o.
+organizationalUnitName = Weppo oot
+commonName = localhost
+emailAddress = root@weppo.pl
+
+[ ext_crypto_example ]
+basicConstraints = CA:FALSE 
+keyUsage = critical, digitalSignature, keyEncipherment
+

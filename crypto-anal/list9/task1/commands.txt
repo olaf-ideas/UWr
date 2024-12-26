@@ -1,0 +1,4 @@
+openssl genpkey -algorithm RSA -aes256 -out CN_CA.key -pkeyopt rsa_keygen_bits:4096 -pass pass:kryptoanaliza
+
+# days oraz default_days nie dawały wymaganych 10 lat
+openssl req -x509 -new -noenc -key CN_CA.key -sha256 -out CN_CA.crt -config CA_openssl.cnf -days 3650

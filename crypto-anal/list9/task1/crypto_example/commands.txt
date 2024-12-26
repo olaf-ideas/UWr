@@ -1,0 +1,61 @@
+# generowanie klucza
+openssl genpkey -algorithm RSA -out crypto_example.key -pkeyopt rsa_keygen_bits:4096
+
+# generowania prosby o certyfikat
+openssl req -new -key crypto_example.key -out crypto_example.csr -config crypto_example.cnf
+
+# generowanie certyfikatu
+openssl x509 -req -in crypto_example.csr -CA ../CN_CA.crt -CAkey ../CN_CA.key -CAcreateserial -out crypto_example_ext.crt -days 365 -extfile crypto_example_ext.cnf -extensions crypto_example_ext
+
+# Kopiuje certyfikat
+cp ../CN_CA.crt /usr/local/share/ca-certificates/
+
+# https://manpages.debian.org/buster/ca-certificates/update-ca-certificates.8.en.html
+
+# Aktualizuje certyfikaty
+sudo update-ca-certificates
+Updating certificates in /etc/ssl/certs...
+rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+1 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+Processing triggers for ca-certificates-java (20230710~deb12u1) ...
+Adding debian:CN_CA.pem
+done.
+Updating Mono key store
+Mono Certificate Store Sync - version 6.12.0.200
+Populate Mono certificate store from a concatenated list of certificates.
+Copyright 2002, 2003 Motus Technologies. Copyright 2004-2008 Novell. BSD licensed.
+
+Importing into legacy system store:
+I already trust 140, your new list has 141
+Certificate added: C=PL, S=Dolnoslaskie, L=Wroclaw, O=Cyfrowy Notariusz, OU=Oddzial Certyfikacji, CN=Cyfrowy Notariusz Root CA, E=root@cyfrowynotariusz.pl
+1 new root certificates were added to your trust store.
+Import process completed.
+
+Importing into BTLS system store:
+I already trust 139, your new list has 141
+Certificate added: C=ES, CN=Autoridad de Certificacion Firmaprofesional CIF A62634068
+Certificate added: C=PL, S=Dolnoslaskie, L=Wroclaw, O=Cyfrowy Notariusz, OU=Oddzial Certyfikacji, CN=Cyfrowy Notariusz Root CA, E=root@cyfrowynotariusz.pl
+2 new root certificates were added to your trust store.
+Import process completed.
+Done
+done.
+
+# po usunieciu certyfikatu z ca-certificates mozna w taki sposob pobrac pakiet wget'em
+
+sudo wget --ca-certificate=CN_CA.crt https://www.crypto.example
+--2024-12-08 19:17:56--  https://www.crypto.example/
+Loaded CA certificate 'CN_CA.crt'
+Resolving www.crypto.example (www.crypto.example)... 127.0.0.1
+Connecting to www.crypto.example (www.crypto.example)|127.0.0.1|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 199 [text/html]
+Saving to: ‘index.html’
+
+index.html                100%[=====================================>]     199  --.-KB/s    in 0s
+
+2024-12-08 19:17:56 (2.84 MB/s) - ‘index.html’ saved [199/199]
+
+
+snake-oil - nazwa pochodzaca od 19wiecznych praktych medycznych ktore wykorzystywaly olejki z weza (niestety nie skuteczna metoda)
+ te bezuzyteczne certyfikaty sa aby przetestowac dzialanie ssl

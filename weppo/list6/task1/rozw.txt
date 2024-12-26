@@ -1,0 +1,3 @@
+tsc solve.ts --watch
+
+// automatycznie monitoruje plik i kompiluje po wykryciu zmian

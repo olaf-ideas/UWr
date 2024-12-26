@@ -1,0 +1,33 @@
+[ ca ]
+default_ca = CA_default
+
+[ CA_default ]
+dir				= .
+certs			= $dir/certs
+crl_dir			= $dir/crl
+new_certs_dir	= $dir/newcerts
+database		= $dir/index.txt
+serial			= $dir/serial
+RANDFILE		= $dir/private/.rand
+default_days	= 3650
+policy			= policy_match
+email_in_dn		= no
+utf8			= yes
+prompt			= no
+
+[ req ]
+days = 3650 # nie dziala
+default_bits		= 4096
+default_keyfile		= CN_CA.key
+distinguished_name	= cyfrowy_notariusz
+string_mask			= utf8only
+prompt				= no
+
+[ cyfrowy_notariusz ]
+countryName				= PL
+stateOrProvinceName		= Dolnoslaskie
+localityName 			= Wroclaw
+organizationName 		= Cyfrowy Notariusz
+organizationalUnitName	= Oddzial Certyfikacji
+commonName				= Cyfrowy Notariusz Root CA
+emailAddress			= root@cyfrowynotariusz.pl

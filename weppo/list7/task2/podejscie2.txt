@@ -1,0 +1,11 @@
+# Tworzymy certyfikat CA
+openssl genrsa -out ca-key.pem 4096
+openssl req -x509 -new -nodes -key ca-key.pem -sha256 -days 3650 -out ca-cert.pem -subj "/CN=localhost"
+
+# Tworzymy certyfikat serwera i podpisujemy za pomoca CA
+openssl genrsa -out server-key.pem 4096
+openssl req -new -key server-key.pem -out server.csr -subj "/CN=localhost"
+openssl x509 -req -in server.csr -CA ca-cert.pem -CAkey ca-key.pem -CAcreateserial -out server-cert.pem -days 365 -sha256
+openssl pkcs12 -export -out server.pfx -inkey server-key.pem -in server-cert.pem -certfile ca-cert.pem -passout pass:weppo
+
+

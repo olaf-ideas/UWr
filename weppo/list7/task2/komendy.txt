@@ -1,0 +1,9 @@
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 3650 -noenc
+
+-x509 -> certyfikat podpisany przez siebie
+rsa:4096 -> klucz 4096 bitowy algorytmem rsa
+-days 3650 -> na 10 lat
+
+openssl pkcs12 -export -out cert.pfx -inkey key.pem -in cert.pem -name "Weppo" -passout pass:weppo
+
+generuje plik w formacie pkcs#12

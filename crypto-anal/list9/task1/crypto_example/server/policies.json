@@ -1,0 +1,7 @@
+{
+  "policies": {
+    "Certificates": {
+      "Install": ["/usr/lib/mozilla/certificates/CN_CA.crt"]
+    }
+  }
+}

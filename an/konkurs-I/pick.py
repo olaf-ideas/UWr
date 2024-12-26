@@ -4,14 +4,10 @@ from PIL import Image
 
 pdf_path = "konkurs-I-napis-2024.pdf"
 image_path = "konkurs-I-napis-2024.jpg"
-output_path = "konkurs-I-345615-dane.txt"
+output_path = "output.txt"
 
 doc = fitz.open(pdf_path)[0]
 doc.get_pixmap(dpi=300).save(image_path)
-
-with Image.open(image_path) as img:
-	rotated = img.rotate(90, expand=True)
-	rotated.save(image_path)
 
 img = Image.open(image_path).convert("RGB")
 width, height = img.size
