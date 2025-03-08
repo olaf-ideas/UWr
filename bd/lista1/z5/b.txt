@@ -1,0 +1,8 @@
+gamma directors.id, directors.first_name, directors.last_name; count(actors.id) → actors_count (
+	pi directors.id, directors.first_name, directors.last_name, actors.id (
+		actors 
+		join actors.id=roles.actor_id roles 
+		join movies_directors 
+		join movies_directors.director_id=directors.id directors
+	)
+)

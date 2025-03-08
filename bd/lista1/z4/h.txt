@@ -1,0 +1,13 @@
+pi director_last_name (
+	((rho id → movie_id (movies)) -
+	pi movie_id, name, year, rank (
+		sigma gender = 'F' (
+			(rho id → actor_id (actors)) ⨝ roles ⨝ (rho id → movie_id (movies))
+		)
+	)) 
+	⨝ movies_directors
+	⨝ (rho id → director_id, 
+				 first_name → director_first_name,
+				 last_name → director_last_name 
+				 (directors))
+)

@@ -1,0 +1,6 @@
+movies - 
+pi id, name, year, rank (
+	sigma year > year2 (
+		movies x (rho year → year2 (pi year (movies)))
+	)
+)

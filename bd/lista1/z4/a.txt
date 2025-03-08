@@ -1,0 +1,8 @@
+pi name, last_name, genre (
+	sigma year <= 1960 (
+		(rho id → movie_id (movies)) ⨝ 
+		movies_genres ⨝ 
+		movies_directors ⨝ 
+		(rho id → director_id (directors))
+	)
+)

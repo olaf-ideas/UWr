@@ -1,0 +1,5 @@
+pi actors.id, actors.first_name, actors.last_name (
+	sigma role_count >= 2 (
+		gamma actors.id, actors.first_name, actors.last_name,roles.role; count(roles.role) → role_count (actors join actors.id=roles.actor_id roles)
+	)
+)

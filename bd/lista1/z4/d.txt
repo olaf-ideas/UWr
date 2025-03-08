@@ -1,0 +1,5 @@
+pi name (
+	sigma genre = 'Drama' and genre2 = 'Sci-Fi' (
+		movies_genres ⨝
+		(rho genre → genre2 (movies_genres))
+	) ⨝ (rho id → movie_id (movies)))

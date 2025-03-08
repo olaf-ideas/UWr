@@ -1,0 +1,9 @@
+pi first_name, last_name (actors) -
+pi first_name, last_name (
+	sigma director_first_name = 'Quentin' and director_last_name = 'Tarantino'
+	(
+		rho id → actor_id (actors) ⨝ 
+		roles ⨝ movies_directors ⨝
+		rho id → director_id, first_name → director_first_name, last_name → director_last_name (directors)
+	)
+)

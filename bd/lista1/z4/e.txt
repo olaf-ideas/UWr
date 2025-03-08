@@ -1,0 +1,3 @@
+rho id → movie_id (movies - (pi id, name, year, rank (sigma rank < rank2 (
+	movies ⨯ (rho rank → rank2 (pi rank (movies)))
+)))) ⨝ movies_directors ⨝ (rho id → director_id (directors)) ⨝ movies_genres

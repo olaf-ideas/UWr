@@ -1,0 +1,7 @@
+pi actors.id, actors.first_name, actors.last_name (
+	sigma movies_done = 1 (
+		gamma actors.id, actors.first_name, actors.last_name; count(roles.movie_id) → movies_done (
+			actors join actors.id=roles.actor_id roles
+		)
+	)
+)

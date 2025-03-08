@@ -1,0 +1,6 @@
+(rho id → director_id (directors)) - 
+pi director_id, first_name, last_name (
+	sigma genre = 'Horror' (
+		(rho id → director_id (directors)) ⨝ movies_directors ⨝ movies_genres
+	)
+)

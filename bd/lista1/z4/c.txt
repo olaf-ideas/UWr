@@ -1,0 +1,11 @@
+pi first_name, last_name (
+	((pi actor_id (rho id → actor_id (actors))) -
+	 (pi actor_id
+		(sigma movie_id != movie_id2
+			((rho movie_id → movie_id2 (pi actor_id, movie_id (roles))) ⨝ 
+				(pi actor_id, movie_id (roles))
+			)
+		)
+	))
+	⨝ (rho id → actor_id (actors))
+)

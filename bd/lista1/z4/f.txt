@@ -1,0 +1,4 @@
+pi last_name (
+	(rho id → actor_id (actors)) ⨝
+		(sigma movie_id != movie_id2 and role = role2 
+			((rho movie_id → movie_id2, role → role2 (roles)) ⨝ roles)))
