@@ -1,0 +1,47 @@
+# forgor to apt install nyancat
+
+gadget address: 0000000000401723
+
+
+0000000000437990 <__getpid>:
+  437990:       b8 27 00 00 00          mov    $0x27,%eax
+  437995:       0f 05                   syscall
+  437997:       c3                      ret
+  437998:       0f 1f 84 00 00 00 00    nopl   0x0(%rax,%rax,1)
+  43799f:       00 
+
+
+
+
+00000000004016bb <echo>:
+  4016bb:       48 83 ec 38             sub    $0x38,%rsp
+  4016bf:       48 89 e6                mov    %rsp,%rsi
+  4016c2:       e8 be ff ff ff          call   401685 <readline>
+  4016c7:       48 89 e7                mov    %rsp,%rdi
+  4016ca:       e8 a1 ec 00 00          call   410370 <_IO_puts>
+  4016cf:       48 83 c4 38             add    $0x38,%rsp
+  4016d3:       c3                      ret
+
+00000000004016d4 <main>:
+  4016d4:       53                      push   %rbx
+  4016d5:       83 ff 02                cmp    $0x2,%edi
+  4016d8:       74 31                   je     40170b <main+0x37>
+  4016da:       48 8b 1d f7 3f 0a 00    mov    0xa3ff7(%rip),%rbx        # 4a56d8 <stdin>
+  4016e1:       ba 23 17 40 00          mov    $0x401723,%edx
+  4016e6:       be 07 90 47 00          mov    $0x479007,%esi
+  4016eb:       48 8b 3d d6 3f 0a 00    mov    0xa3fd6(%rip),%rdi        # 4a56c8 <stderr>
+  4016f2:       b8 00 00 00 00          mov    $0x0,%eax
+  4016f7:       e8 94 89 00 00          call   40a090 <__fprintf>
+  4016fc:       48 89 df                mov    %rbx,%rdi
+  4016ff:       e8 b7 ff ff ff          call   4016bb <echo>
+  401704:       b8 00 00 00 00          mov    $0x0,%eax
+  401709:       5b                      pop    %rbx
+  40170a:       c3                      ret
+  40170b:       48 8b 7e 08             mov    0x8(%rsi),%rdi
+  40170f:       be 04 90 47 00          mov    $0x479004,%esi
+  401714:       e8 17 eb 00 00          call   410230 <_IO_new_fopen>
+  401719:       48 89 c3                mov    %rax,%rbx
+  40171c:       48 85 c0                test   %rax,%rax
+  40171f:       75 c0                   jne    4016e1 <main+0xd>
+  401721:       eb b7                   jmp    4016da <main+0x6>
+

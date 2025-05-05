@@ -1,3 +1,4 @@
+// Olaf Surgut 345615
 #include "table.hpp"
 
 void RoutingTable::send_updates() {
@@ -7,15 +8,16 @@ void RoutingTable::send_updates() {
     dest_addr.sin_port = htons(54321);
 
     for (auto const& interface : interfaces) {
+        // std::cerr << "broadcast: " << interface.broadcast_ip.c_str() << std::endl;        
         inet_pton(AF_INET, interface.broadcast_ip.c_str(), &dest_addr.sin_addr);
-        std::cerr << "broadcast: " << interface.broadcast_ip.c_str() << std::endl;
 
         for (auto& [network, entry] : routing_table) {
-            if (network == interface.network) {
-                continue;
+            uint32_t true_distance = entry.network_dist + interface.network_dist;
+            if (true_distance > INFINITY_DISTANCE) {
+                true_distance = INFINITY_DISTANCE;
             }
 
-            uint32_t true_distance = entry.network_dist + interface.network_dist;
+            // std::cerr << "sending: " << true_distance << '\n';
 
             uint8_t packet[9];
             memcpy(packet + 0, &entry.network_addr, 4);
@@ -30,7 +32,8 @@ void RoutingTable::send_updates() {
                 (struct sockaddr*) &dest_addr, 
                 sizeof(dest_addr)
             ) != 9) {
-                entry.is_reachable = false;
+				// entry.network_dist = INFINITY_DISTANCE;
+                // std::cerr << "interface failed!!!\n";
             }
         }
     }

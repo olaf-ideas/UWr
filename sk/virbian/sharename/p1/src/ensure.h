@@ -1,1 +1,0 @@
-void ensure(int, const char*);

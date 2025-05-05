@@ -1,1 +1,0 @@
-int receive_icmp_echo(int, char [][20], int*, int*, int, int);

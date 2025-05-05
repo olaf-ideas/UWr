@@ -1,3 +1,6 @@
+// Olaf Surgut 345615
+#include <cassert>
+
 #include "table.hpp"
 
 RoutingTable::RoutingTable() {
@@ -18,6 +21,11 @@ RoutingTable::RoutingTable() {
     server_address.sin_family      = AF_INET;
     server_address.sin_port        = htons(54321);
     server_address.sin_addr.s_addr = htonl(INADDR_ANY);
+
+    if (bind(sock_fd, (struct sockaddr*)&server_address, sizeof(server_address)) < 0) {
+        perror("bind error");
+        exit(EXIT_FAILURE);
+    }
 }
 
 RoutingTable::~RoutingTable() {
@@ -34,18 +42,16 @@ std::istream& operator>>(std::istream &is, RoutingTable& rt) {
 
         is >> network >> _ >> distance;
 
-        std::cerr << "? " << network << ' ' << distance << '\n';
-
         std::string network_ip_str = network.substr(0, network.find('/'));
         uint8_t network_mask = stoi(network.substr(network.find('/') + 1));
 
         struct in_addr addr;
         inet_pton(AF_INET, network_ip_str.c_str(), &addr);
 
-        uint32_t mask = ~(((1LL << (network_mask)) - 1));
-        uint32_t network_addr = addr.s_addr | mask;
-        addr.s_addr = network_addr;
-
+        uint32_t mask = (((1LL << (32 - network_mask)) - 1)); // << (network_mask);
+        uint32_t network_addr = addr.s_addr;
+        addr.s_addr = htonl(ntohl(addr.s_addr) | mask);
+        
         char broadcast_ip[INET_ADDRSTRLEN];
         inet_ntop(AF_INET, &addr, broadcast_ip, INET_ADDRSTRLEN);
 
@@ -54,6 +60,7 @@ std::istream& operator>>(std::istream &is, RoutingTable& rt) {
             network_addr,
             network_mask,
             distance,
+            {},
             std::string(broadcast_ip)
         });
 
@@ -62,7 +69,6 @@ std::istream& operator>>(std::istream &is, RoutingTable& rt) {
             network_mask,
             distance,
             "<direct connection>",
-            true,
             true,
             time(0)
         };
@@ -74,7 +80,7 @@ std::istream& operator>>(std::istream &is, RoutingTable& rt) {
 std::ostream& operator<< (std::ostream& os, RoutingTable const& rt) {
     for (auto const& [network, entry] : rt.routing_table) {
         os << network << ' ';
-        if (entry.is_reachable) {
+        if (entry.network_dist < INFINITY_DISTANCE) {
             os << "distance " << entry.network_dist << ' ';
         }
         else {
@@ -85,7 +91,7 @@ std::ostream& operator<< (std::ostream& os, RoutingTable const& rt) {
             os << "connected directly";
         }
         else 
-        if (entry.is_reachable) {
+        if (entry.network_dist < INFINITY_DISTANCE) {
             os << "via " << entry.next_hop;
         }
 
@@ -99,24 +105,43 @@ void RoutingTable::check_timeouts() {
     for (auto it = routing_table.begin(); it != routing_table.end(); ) {
         Entry& entry = it->second;
 
-        if (difftime(time(0), entry.last_update) > TURN_TIME * 3) {
+        if (difftime(time(0), entry.last_update) > TURN_TIME * 3 && !entry.is_direct) {
             // std::cerr << "unreachable: " << it->first << '\n';
             if (entry.network_dist != INFINITY_DISTANCE) {
                 entry.network_dist = INFINITY_DISTANCE;
-                entry.is_reachable = false;
                 entry.last_update = time(0);
                 it++;
             }   
-            else 
-            if (!entry.is_direct) {
-                it = routing_table.erase(it);
-            }
             else {
-                it++;
+                it = routing_table.erase(it);
             }
         }
         else {
             it++;
+        }
+    }
+
+    for (auto const& interface : interfaces) {
+        auto it = routing_table.find(interface.network);
+        assert(it != routing_table.end());
+
+        Entry& entry = it->second;
+        
+        bool interface_alive = false;
+        for (auto [network, last_entry] : interface.last_entries) {
+            if (difftime(time(0), last_entry) < TURN_TIME * 3) {
+                interface_alive = true;
+            }
+        }
+
+        // std::cerr << "interface: " << interface.network << ' ' << interface_alive << ' ' << interface.last_entries.size() << '\n';
+
+        if (!interface_alive) {
+            entry.network_dist = INFINITY_DISTANCE;
+        }
+        else
+        if (entry.network_dist > interface.network_dist) {
+            entry.network_dist = interface.network_dist;
         }
     }
 }
