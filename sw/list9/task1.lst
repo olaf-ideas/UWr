@@ -1,0 +1,234 @@
+
+task1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000ee  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  000000ee  00000182  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000065  00800060  00800060  00000182  2**0
+                  ALLOC
+  3 .stab         0000069c  00000000  00000000  00000184  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      00000cbe  00000000  00000000  00000820  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .comment      00000011  00000000  00000000  000014de  2**0
+                  CONTENTS, READONLY
+  6 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000014f0  2**2
+                  CONTENTS, READONLY
+  7 .debug_info   00000420  00000000  00000000  0000152c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 000003e8  00000000  00000000  0000194c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   0000001a  00000000  00000000  00001d34  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000173  00000000  00000000  00001d4e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	10 c0       	rjmp	.+32     	; 0x22 <__ctors_end>
+   2:	1f c0       	rjmp	.+62     	; 0x42 <__bad_interrupt>
+   4:	1e c0       	rjmp	.+60     	; 0x42 <__bad_interrupt>
+   6:	1d c0       	rjmp	.+58     	; 0x42 <__bad_interrupt>
+   8:	1c c0       	rjmp	.+56     	; 0x42 <__bad_interrupt>
+   a:	1b c0       	rjmp	.+54     	; 0x42 <__bad_interrupt>
+   c:	1a c0       	rjmp	.+52     	; 0x42 <__bad_interrupt>
+   e:	19 c0       	rjmp	.+50     	; 0x42 <__bad_interrupt>
+  10:	18 c0       	rjmp	.+48     	; 0x42 <__bad_interrupt>
+  12:	25 c0       	rjmp	.+74     	; 0x5e <__vector_9>
+  14:	16 c0       	rjmp	.+44     	; 0x42 <__bad_interrupt>
+  16:	15 c0       	rjmp	.+42     	; 0x42 <__bad_interrupt>
+  18:	14 c0       	rjmp	.+40     	; 0x42 <__bad_interrupt>
+  1a:	13 c0       	rjmp	.+38     	; 0x42 <__bad_interrupt>
+  1c:	12 c0       	rjmp	.+36     	; 0x42 <__bad_interrupt>
+  1e:	11 c0       	rjmp	.+34     	; 0x42 <__bad_interrupt>
+  20:	10 c0       	rjmp	.+32     	; 0x42 <__bad_interrupt>
+
+00000022 <__ctors_end>:
+  22:	11 24       	eor	r1, r1
+  24:	1f be       	out	0x3f, r1	; 63
+  26:	cf e5       	ldi	r28, 0x5F	; 95
+  28:	d2 e0       	ldi	r29, 0x02	; 2
+  2a:	de bf       	out	0x3e, r29	; 62
+  2c:	cd bf       	out	0x3d, r28	; 61
+
+0000002e <__do_clear_bss>:
+  2e:	20 e0       	ldi	r18, 0x00	; 0
+  30:	a0 e6       	ldi	r26, 0x60	; 96
+  32:	b0 e0       	ldi	r27, 0x00	; 0
+  34:	01 c0       	rjmp	.+2      	; 0x38 <.do_clear_bss_start>
+
+00000036 <.do_clear_bss_loop>:
+  36:	1d 92       	st	X+, r1
+
+00000038 <.do_clear_bss_start>:
+  38:	a5 3c       	cpi	r26, 0xC5	; 197
+  3a:	b2 07       	cpc	r27, r18
+  3c:	e1 f7       	brne	.-8      	; 0x36 <.do_clear_bss_loop>
+  3e:	3e d0       	rcall	.+124    	; 0xbc <main>
+  40:	54 c0       	rjmp	.+168    	; 0xea <_exit>
+
+00000042 <__bad_interrupt>:
+  42:	de cf       	rjmp	.-68     	; 0x0 <__vectors>
+
+00000044 <io_init>:
+
+uint8_t queue[QUEUE_LEN];
+uint8_t last = 0;
+
+void io_init() {
+    BTN_PORT |= _BV(BTN);
+  44:	df 9a       	sbi	0x1b, 7	; 27
+    LED_DDR  |= _BV(LED);
+  46:	ba 9a       	sbi	0x17, 2	; 23
+  48:	08 95       	ret
+
+0000004a <timer0_init>:
+}
+
+void timer0_init() {
+    TCCR0A = _BV(WGM01); // CTC
+  4a:	82 e0       	ldi	r24, 0x02	; 2
+  4c:	80 bf       	out	0x30, r24	; 48
+    TCCR0B = _BV(CS01) | _BV(CS00); // /64 prescaler
+  4e:	83 e0       	ldi	r24, 0x03	; 3
+  50:	83 bf       	out	0x33, r24	; 51
+    OCR0A = 155; // 100 hz = 8e6 / (2 * 64 * (1 + 155.25))
+  52:	8b e9       	ldi	r24, 0x9B	; 155
+  54:	86 bf       	out	0x36, r24	; 54
+    TIMSK0 |= _BV(OCIE0A); // enable interrupt
+  56:	89 b7       	in	r24, 0x39	; 57
+  58:	82 60       	ori	r24, 0x02	; 2
+  5a:	89 bf       	out	0x39, r24	; 57
+  5c:	08 95       	ret
+
+0000005e <__vector_9>:
+}
+
+ISR(TIM0_COMPA_vect) {
+  5e:	1f 92       	push	r1
+  60:	0f 92       	push	r0
+  62:	0f b6       	in	r0, 0x3f	; 63
+  64:	0f 92       	push	r0
+  66:	11 24       	eor	r1, r1
+  68:	8f 93       	push	r24
+  6a:	9f 93       	push	r25
+  6c:	ef 93       	push	r30
+  6e:	ff 93       	push	r31
+    LED_PORT = queue[last] << LED;
+  70:	e0 91 60 00 	lds	r30, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+  74:	f0 e0       	ldi	r31, 0x00	; 0
+  76:	ef 59       	subi	r30, 0x9F	; 159
+  78:	ff 4f       	sbci	r31, 0xFF	; 255
+  7a:	80 81       	ld	r24, Z
+  7c:	88 0f       	add	r24, r24
+  7e:	88 0f       	add	r24, r24
+  80:	88 bb       	out	0x18, r24	; 24
+
+    uint8_t pressed = (BTN_PIN & _BV(BTN)) ? 0 : 1;
+  82:	89 b3       	in	r24, 0x19	; 25
+    queue[last] = pressed;
+  84:	90 91 60 00 	lds	r25, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+  88:	e9 2f       	mov	r30, r25
+  8a:	f0 e0       	ldi	r31, 0x00	; 0
+  8c:	ef 59       	subi	r30, 0x9F	; 159
+  8e:	ff 4f       	sbci	r31, 0xFF	; 255
+  90:	80 95       	com	r24
+  92:	88 1f       	adc	r24, r24
+  94:	88 27       	eor	r24, r24
+  96:	88 1f       	adc	r24, r24
+  98:	80 83       	st	Z, r24
+
+    last++;
+  9a:	9f 5f       	subi	r25, 0xFF	; 255
+    if (last == QUEUE_LEN) {
+  9c:	94 36       	cpi	r25, 0x64	; 100
+  9e:	59 f0       	breq	.+22     	; 0xb6 <__vector_9+0x58>
+    LED_PORT = queue[last] << LED;
+
+    uint8_t pressed = (BTN_PIN & _BV(BTN)) ? 0 : 1;
+    queue[last] = pressed;
+
+    last++;
+  a0:	90 93 60 00 	sts	0x0060, r25	; 0x800060 <__DATA_REGION_ORIGIN__>
+    if (last == QUEUE_LEN) {
+        last = 0;
+    }
+}
+  a4:	ff 91       	pop	r31
+  a6:	ef 91       	pop	r30
+  a8:	9f 91       	pop	r25
+  aa:	8f 91       	pop	r24
+  ac:	0f 90       	pop	r0
+  ae:	0f be       	out	0x3f, r0	; 63
+  b0:	0f 90       	pop	r0
+  b2:	1f 90       	pop	r1
+  b4:	18 95       	reti
+    uint8_t pressed = (BTN_PIN & _BV(BTN)) ? 0 : 1;
+    queue[last] = pressed;
+
+    last++;
+    if (last == QUEUE_LEN) {
+        last = 0;
+  b6:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
+    }
+}
+  ba:	f4 cf       	rjmp	.-24     	; 0xa4 <__vector_9+0x46>
+
+000000bc <main>:
+
+uint8_t queue[QUEUE_LEN];
+uint8_t last = 0;
+
+void io_init() {
+    BTN_PORT |= _BV(BTN);
+  bc:	df 9a       	sbi	0x1b, 7	; 27
+    LED_DDR  |= _BV(LED);
+  be:	ba 9a       	sbi	0x17, 2	; 23
+}
+
+void timer0_init() {
+    TCCR0A = _BV(WGM01); // CTC
+  c0:	82 e0       	ldi	r24, 0x02	; 2
+  c2:	80 bf       	out	0x30, r24	; 48
+    TCCR0B = _BV(CS01) | _BV(CS00); // /64 prescaler
+  c4:	83 e0       	ldi	r24, 0x03	; 3
+  c6:	83 bf       	out	0x33, r24	; 51
+    OCR0A = 155; // 100 hz = 8e6 / (2 * 64 * (1 + 155.25))
+  c8:	8b e9       	ldi	r24, 0x9B	; 155
+  ca:	86 bf       	out	0x36, r24	; 54
+    TIMSK0 |= _BV(OCIE0A); // enable interrupt
+  cc:	89 b7       	in	r24, 0x39	; 57
+  ce:	82 60       	ori	r24, 0x02	; 2
+  d0:	89 bf       	out	0x39, r24	; 57
+
+int main() {
+    io_init();
+    timer0_init();
+
+    set_sleep_mode(SLEEP_MODE_IDLE);
+  d2:	85 b7       	in	r24, 0x35	; 53
+  d4:	87 7e       	andi	r24, 0xE7	; 231
+  d6:	85 bf       	out	0x35, r24	; 53
+    sei();
+  d8:	78 94       	sei
+
+    while (1) {
+        sleep_mode();
+  da:	85 b7       	in	r24, 0x35	; 53
+  dc:	80 62       	ori	r24, 0x20	; 32
+  de:	85 bf       	out	0x35, r24	; 53
+  e0:	88 95       	sleep
+  e2:	85 b7       	in	r24, 0x35	; 53
+  e4:	8f 7d       	andi	r24, 0xDF	; 223
+  e6:	85 bf       	out	0x35, r24	; 53
+  e8:	f8 cf       	rjmp	.-16     	; 0xda <main+0x1e>
+
+000000ea <_exit>:
+  ea:	f8 94       	cli
+
+000000ec <__stop_program>:
+  ec:	ff cf       	rjmp	.-2      	; 0xec <__stop_program>

@@ -1,0 +1,515 @@
+
+task2_84A.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000001d6  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  000001d6  0000024a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .stab         00000924  00000000  00000000  0000024c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000c8a  00000000  00000000  00000b70  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .comment      00000011  00000000  00000000  000017fa  2**0
+                  CONTENTS, READONLY
+  5 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000180c  2**2
+                  CONTENTS, READONLY
+  6 .debug_info   00000420  00000000  00000000  00001848  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000003e8  00000000  00000000  00001c68  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000001a  00000000  00000000  00002050  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000173  00000000  00000000  0000206a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	10 c0       	rjmp	.+32     	; 0x22 <__ctors_end>
+   2:	17 c0       	rjmp	.+46     	; 0x32 <__bad_interrupt>
+   4:	16 c0       	rjmp	.+44     	; 0x32 <__bad_interrupt>
+   6:	15 c0       	rjmp	.+42     	; 0x32 <__bad_interrupt>
+   8:	14 c0       	rjmp	.+40     	; 0x32 <__bad_interrupt>
+   a:	13 c0       	rjmp	.+38     	; 0x32 <__bad_interrupt>
+   c:	12 c0       	rjmp	.+36     	; 0x32 <__bad_interrupt>
+   e:	11 c0       	rjmp	.+34     	; 0x32 <__bad_interrupt>
+  10:	10 c0       	rjmp	.+32     	; 0x32 <__bad_interrupt>
+  12:	0f c0       	rjmp	.+30     	; 0x32 <__bad_interrupt>
+  14:	0e c0       	rjmp	.+28     	; 0x32 <__bad_interrupt>
+  16:	0d c0       	rjmp	.+26     	; 0x32 <__bad_interrupt>
+  18:	0c c0       	rjmp	.+24     	; 0x32 <__bad_interrupt>
+  1a:	0b c0       	rjmp	.+22     	; 0x32 <__bad_interrupt>
+  1c:	0a c0       	rjmp	.+20     	; 0x32 <__bad_interrupt>
+  1e:	09 c0       	rjmp	.+18     	; 0x32 <__bad_interrupt>
+  20:	08 c0       	rjmp	.+16     	; 0x32 <__bad_interrupt>
+
+00000022 <__ctors_end>:
+  22:	11 24       	eor	r1, r1
+  24:	1f be       	out	0x3f, r1	; 63
+  26:	cf e5       	ldi	r28, 0x5F	; 95
+  28:	d2 e0       	ldi	r29, 0x02	; 2
+  2a:	de bf       	out	0x3e, r29	; 62
+  2c:	cd bf       	out	0x3d, r28	; 61
+  2e:	76 d0       	rcall	.+236    	; 0x11c <main>
+  30:	d0 c0       	rjmp	.+416    	; 0x1d2 <_exit>
+
+00000032 <__bad_interrupt>:
+  32:	e6 cf       	rjmp	.-52     	; 0x0 <__vectors>
+
+00000034 <spi_transfer>:
+
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+  34:	87 fd       	sbrc	r24, 7
+  36:	62 c0       	rjmp	.+196    	; 0xfc <__SREG__+0xbd>
+        else           MOSI_PORT &= ~_BV(MOSI);
+  38:	de 98       	cbi	0x1b, 6	; 27
+
+        SCK_PORT |= _BV(SCK);
+  3a:	dc 9a       	sbi	0x1b, 4	; 27
+        rx <<= 1;
+        rx |= (MISO_PIN >> MISO) & 1;
+  3c:	99 b3       	in	r25, 0x19	; 25
+  3e:	95 fb       	bst	r25, 5
+  40:	99 27       	eor	r25, r25
+  42:	90 f9       	bld	r25, 0
+        SCK_PORT &= ~_BV(SCK);
+  44:	dc 98       	cbi	0x1b, 4	; 27
+
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+  46:	48 2f       	mov	r20, r24
+  48:	44 0f       	add	r20, r20
+  4a:	86 fd       	sbrc	r24, 6
+  4c:	65 c0       	rjmp	.+202    	; 0x118 <__SREG__+0xd9>
+        else           MOSI_PORT &= ~_BV(MOSI);
+  4e:	de 98       	cbi	0x1b, 6	; 27
+
+        SCK_PORT |= _BV(SCK);
+  50:	dc 9a       	sbi	0x1b, 4	; 27
+        rx <<= 1;
+        rx |= (MISO_PIN >> MISO) & 1;
+  52:	89 b3       	in	r24, 0x19	; 25
+  54:	85 fb       	bst	r24, 5
+  56:	22 27       	eor	r18, r18
+  58:	20 f9       	bld	r18, 0
+  5a:	89 2f       	mov	r24, r25
+  5c:	88 0f       	add	r24, r24
+  5e:	82 2b       	or	r24, r18
+        SCK_PORT &= ~_BV(SCK);
+  60:	dc 98       	cbi	0x1b, 4	; 27
+
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+  62:	34 2f       	mov	r19, r20
+  64:	33 0f       	add	r19, r19
+  66:	46 fd       	sbrc	r20, 6
+  68:	55 c0       	rjmp	.+170    	; 0x114 <__SREG__+0xd5>
+        else           MOSI_PORT &= ~_BV(MOSI);
+  6a:	de 98       	cbi	0x1b, 6	; 27
+
+        SCK_PORT |= _BV(SCK);
+  6c:	dc 9a       	sbi	0x1b, 4	; 27
+        rx <<= 1;
+        rx |= (MISO_PIN >> MISO) & 1;
+  6e:	99 b3       	in	r25, 0x19	; 25
+  70:	95 fb       	bst	r25, 5
+  72:	99 27       	eor	r25, r25
+  74:	90 f9       	bld	r25, 0
+  76:	88 0f       	add	r24, r24
+  78:	89 2b       	or	r24, r25
+        SCK_PORT &= ~_BV(SCK);
+  7a:	dc 98       	cbi	0x1b, 4	; 27
+
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+  7c:	23 2f       	mov	r18, r19
+  7e:	22 0f       	add	r18, r18
+  80:	36 fd       	sbrc	r19, 6
+  82:	46 c0       	rjmp	.+140    	; 0x110 <__SREG__+0xd1>
+        else           MOSI_PORT &= ~_BV(MOSI);
+  84:	de 98       	cbi	0x1b, 6	; 27
+
+        SCK_PORT |= _BV(SCK);
+  86:	dc 9a       	sbi	0x1b, 4	; 27
+        rx <<= 1;
+        rx |= (MISO_PIN >> MISO) & 1;
+  88:	99 b3       	in	r25, 0x19	; 25
+  8a:	95 fb       	bst	r25, 5
+  8c:	99 27       	eor	r25, r25
+  8e:	90 f9       	bld	r25, 0
+  90:	88 0f       	add	r24, r24
+  92:	89 2b       	or	r24, r25
+        SCK_PORT &= ~_BV(SCK);
+  94:	dc 98       	cbi	0x1b, 4	; 27
+
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+  96:	32 2f       	mov	r19, r18
+  98:	33 0f       	add	r19, r19
+  9a:	26 fd       	sbrc	r18, 6
+  9c:	37 c0       	rjmp	.+110    	; 0x10c <__SREG__+0xcd>
+        else           MOSI_PORT &= ~_BV(MOSI);
+  9e:	de 98       	cbi	0x1b, 6	; 27
+
+        SCK_PORT |= _BV(SCK);
+  a0:	dc 9a       	sbi	0x1b, 4	; 27
+        rx <<= 1;
+        rx |= (MISO_PIN >> MISO) & 1;
+  a2:	99 b3       	in	r25, 0x19	; 25
+  a4:	95 fb       	bst	r25, 5
+  a6:	99 27       	eor	r25, r25
+  a8:	90 f9       	bld	r25, 0
+  aa:	88 0f       	add	r24, r24
+  ac:	89 2b       	or	r24, r25
+        SCK_PORT &= ~_BV(SCK);
+  ae:	dc 98       	cbi	0x1b, 4	; 27
+
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+  b0:	23 2f       	mov	r18, r19
+  b2:	22 0f       	add	r18, r18
+  b4:	36 fd       	sbrc	r19, 6
+  b6:	28 c0       	rjmp	.+80     	; 0x108 <__SREG__+0xc9>
+        else           MOSI_PORT &= ~_BV(MOSI);
+  b8:	de 98       	cbi	0x1b, 6	; 27
+
+        SCK_PORT |= _BV(SCK);
+  ba:	dc 9a       	sbi	0x1b, 4	; 27
+        rx <<= 1;
+        rx |= (MISO_PIN >> MISO) & 1;
+  bc:	99 b3       	in	r25, 0x19	; 25
+  be:	95 fb       	bst	r25, 5
+  c0:	99 27       	eor	r25, r25
+  c2:	90 f9       	bld	r25, 0
+  c4:	88 0f       	add	r24, r24
+  c6:	89 2b       	or	r24, r25
+        SCK_PORT &= ~_BV(SCK);
+  c8:	dc 98       	cbi	0x1b, 4	; 27
+
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+  ca:	32 2f       	mov	r19, r18
+  cc:	33 0f       	add	r19, r19
+  ce:	26 fd       	sbrc	r18, 6
+  d0:	19 c0       	rjmp	.+50     	; 0x104 <__SREG__+0xc5>
+        else           MOSI_PORT &= ~_BV(MOSI);
+  d2:	de 98       	cbi	0x1b, 6	; 27
+
+        SCK_PORT |= _BV(SCK);
+  d4:	dc 9a       	sbi	0x1b, 4	; 27
+        rx <<= 1;
+        rx |= (MISO_PIN >> MISO) & 1;
+  d6:	99 b3       	in	r25, 0x19	; 25
+  d8:	95 fb       	bst	r25, 5
+  da:	99 27       	eor	r25, r25
+  dc:	90 f9       	bld	r25, 0
+  de:	88 0f       	add	r24, r24
+  e0:	89 2b       	or	r24, r25
+        SCK_PORT &= ~_BV(SCK);
+  e2:	dc 98       	cbi	0x1b, 4	; 27
+
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+  e4:	36 fd       	sbrc	r19, 6
+  e6:	0c c0       	rjmp	.+24     	; 0x100 <__SREG__+0xc1>
+        else           MOSI_PORT &= ~_BV(MOSI);
+  e8:	de 98       	cbi	0x1b, 6	; 27
+
+        SCK_PORT |= _BV(SCK);
+  ea:	dc 9a       	sbi	0x1b, 4	; 27
+        rx <<= 1;
+        rx |= (MISO_PIN >> MISO) & 1;
+  ec:	99 b3       	in	r25, 0x19	; 25
+  ee:	95 fb       	bst	r25, 5
+  f0:	99 27       	eor	r25, r25
+  f2:	90 f9       	bld	r25, 0
+  f4:	88 0f       	add	r24, r24
+        SCK_PORT &= ~_BV(SCK);
+  f6:	dc 98       	cbi	0x1b, 4	; 27
+        tx <<= 1;
+    }
+
+    return rx;
+}
+  f8:	89 2b       	or	r24, r25
+  fa:	08 95       	ret
+
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+  fc:	de 9a       	sbi	0x1b, 6	; 27
+  fe:	9d cf       	rjmp	.-198    	; 0x3a <spi_transfer+0x6>
+ 100:	de 9a       	sbi	0x1b, 6	; 27
+ 102:	f3 cf       	rjmp	.-26     	; 0xea <__SREG__+0xab>
+ 104:	de 9a       	sbi	0x1b, 6	; 27
+ 106:	e6 cf       	rjmp	.-52     	; 0xd4 <__SREG__+0x95>
+ 108:	de 9a       	sbi	0x1b, 6	; 27
+ 10a:	d7 cf       	rjmp	.-82     	; 0xba <__SREG__+0x7b>
+ 10c:	de 9a       	sbi	0x1b, 6	; 27
+ 10e:	c8 cf       	rjmp	.-112    	; 0xa0 <__SREG__+0x61>
+ 110:	de 9a       	sbi	0x1b, 6	; 27
+ 112:	b9 cf       	rjmp	.-142    	; 0x86 <__SREG__+0x47>
+ 114:	de 9a       	sbi	0x1b, 6	; 27
+ 116:	aa cf       	rjmp	.-172    	; 0x6c <__SREG__+0x2d>
+ 118:	de 9a       	sbi	0x1b, 6	; 27
+ 11a:	9a cf       	rjmp	.-204    	; 0x50 <__SREG__+0x11>
+
+0000011c <main>:
+
+    return rx;
+}
+
+int main() {
+    LED_DDR |= _BV(LED);
+ 11c:	ba 9a       	sbi	0x17, 2	; 23
+    BTN_PORT |= _BV(BTN);
+ 11e:	df 9a       	sbi	0x1b, 7	; 27
+
+    MOSI_DDR |= _BV(MOSI);
+ 120:	d6 9a       	sbi	0x1a, 6	; 26
+    SCK_DDR |= _BV(SCK);
+ 122:	d4 9a       	sbi	0x1a, 4	; 26
+ 124:	07 c0       	rjmp	.+14     	; 0x134 <main+0x18>
+    for (;;) {
+        uint8_t tx = (BTN_PIN & _BV(BTN)) ? 0 : 1;
+        uint8_t rx = spi_transfer(tx);
+
+        if (rx)
+            LED_PORT |= _BV(LED);
+ 126:	c2 9a       	sbi	0x18, 2	; 24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 128:	87 e8       	ldi	r24, 0x87	; 135
+ 12a:	93 e1       	ldi	r25, 0x13	; 19
+ 12c:	01 97       	sbiw	r24, 0x01	; 1
+ 12e:	f1 f7       	brne	.-4      	; 0x12c <main+0x10>
+ 130:	00 c0       	rjmp	.+0      	; 0x132 <main+0x16>
+ 132:	00 00       	nop
+
+    MOSI_DDR |= _BV(MOSI);
+    SCK_DDR |= _BV(SCK);
+
+    for (;;) {
+        uint8_t tx = (BTN_PIN & _BV(BTN)) ? 0 : 1;
+ 134:	29 b3       	in	r18, 0x19	; 25
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+        else           MOSI_PORT &= ~_BV(MOSI);
+ 136:	de 98       	cbi	0x1b, 6	; 27
+
+        SCK_PORT |= _BV(SCK);
+ 138:	dc 9a       	sbi	0x1b, 4	; 27
+        rx <<= 1;
+        rx |= (MISO_PIN >> MISO) & 1;
+ 13a:	89 b3       	in	r24, 0x19	; 25
+        SCK_PORT &= ~_BV(SCK);
+ 13c:	dc 98       	cbi	0x1b, 4	; 27
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+        else           MOSI_PORT &= ~_BV(MOSI);
+ 13e:	de 98       	cbi	0x1b, 6	; 27
+
+        SCK_PORT |= _BV(SCK);
+ 140:	dc 9a       	sbi	0x1b, 4	; 27
+        rx <<= 1;
+        rx |= (MISO_PIN >> MISO) & 1;
+ 142:	99 b3       	in	r25, 0x19	; 25
+ 144:	85 fb       	bst	r24, 5
+ 146:	88 27       	eor	r24, r24
+ 148:	80 f9       	bld	r24, 0
+ 14a:	88 0f       	add	r24, r24
+ 14c:	95 fb       	bst	r25, 5
+ 14e:	99 27       	eor	r25, r25
+ 150:	90 f9       	bld	r25, 0
+ 152:	89 2b       	or	r24, r25
+        SCK_PORT &= ~_BV(SCK);
+ 154:	dc 98       	cbi	0x1b, 4	; 27
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+        else           MOSI_PORT &= ~_BV(MOSI);
+ 156:	de 98       	cbi	0x1b, 6	; 27
+
+        SCK_PORT |= _BV(SCK);
+ 158:	dc 9a       	sbi	0x1b, 4	; 27
+        rx <<= 1;
+        rx |= (MISO_PIN >> MISO) & 1;
+ 15a:	99 b3       	in	r25, 0x19	; 25
+ 15c:	95 fb       	bst	r25, 5
+ 15e:	99 27       	eor	r25, r25
+ 160:	90 f9       	bld	r25, 0
+ 162:	88 0f       	add	r24, r24
+ 164:	89 2b       	or	r24, r25
+        SCK_PORT &= ~_BV(SCK);
+ 166:	dc 98       	cbi	0x1b, 4	; 27
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+        else           MOSI_PORT &= ~_BV(MOSI);
+ 168:	de 98       	cbi	0x1b, 6	; 27
+
+        SCK_PORT |= _BV(SCK);
+ 16a:	dc 9a       	sbi	0x1b, 4	; 27
+        rx <<= 1;
+        rx |= (MISO_PIN >> MISO) & 1;
+ 16c:	99 b3       	in	r25, 0x19	; 25
+ 16e:	95 fb       	bst	r25, 5
+ 170:	99 27       	eor	r25, r25
+ 172:	90 f9       	bld	r25, 0
+ 174:	88 0f       	add	r24, r24
+ 176:	89 2b       	or	r24, r25
+        SCK_PORT &= ~_BV(SCK);
+ 178:	dc 98       	cbi	0x1b, 4	; 27
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+        else           MOSI_PORT &= ~_BV(MOSI);
+ 17a:	de 98       	cbi	0x1b, 6	; 27
+
+        SCK_PORT |= _BV(SCK);
+ 17c:	dc 9a       	sbi	0x1b, 4	; 27
+        rx <<= 1;
+        rx |= (MISO_PIN >> MISO) & 1;
+ 17e:	99 b3       	in	r25, 0x19	; 25
+ 180:	95 fb       	bst	r25, 5
+ 182:	99 27       	eor	r25, r25
+ 184:	90 f9       	bld	r25, 0
+ 186:	88 0f       	add	r24, r24
+ 188:	89 2b       	or	r24, r25
+        SCK_PORT &= ~_BV(SCK);
+ 18a:	dc 98       	cbi	0x1b, 4	; 27
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+        else           MOSI_PORT &= ~_BV(MOSI);
+ 18c:	de 98       	cbi	0x1b, 6	; 27
+
+        SCK_PORT |= _BV(SCK);
+ 18e:	dc 9a       	sbi	0x1b, 4	; 27
+        rx <<= 1;
+        rx |= (MISO_PIN >> MISO) & 1;
+ 190:	99 b3       	in	r25, 0x19	; 25
+ 192:	95 fb       	bst	r25, 5
+ 194:	99 27       	eor	r25, r25
+ 196:	90 f9       	bld	r25, 0
+ 198:	88 0f       	add	r24, r24
+ 19a:	89 2b       	or	r24, r25
+        SCK_PORT &= ~_BV(SCK);
+ 19c:	dc 98       	cbi	0x1b, 4	; 27
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+        else           MOSI_PORT &= ~_BV(MOSI);
+ 19e:	de 98       	cbi	0x1b, 6	; 27
+
+        SCK_PORT |= _BV(SCK);
+ 1a0:	dc 9a       	sbi	0x1b, 4	; 27
+        rx <<= 1;
+        rx |= (MISO_PIN >> MISO) & 1;
+ 1a2:	99 b3       	in	r25, 0x19	; 25
+ 1a4:	95 fb       	bst	r25, 5
+ 1a6:	99 27       	eor	r25, r25
+ 1a8:	90 f9       	bld	r25, 0
+ 1aa:	88 0f       	add	r24, r24
+ 1ac:	89 2b       	or	r24, r25
+        SCK_PORT &= ~_BV(SCK);
+ 1ae:	dc 98       	cbi	0x1b, 4	; 27
+
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+ 1b0:	27 ff       	sbrs	r18, 7
+ 1b2:	0d c0       	rjmp	.+26     	; 0x1ce <main+0xb2>
+        else           MOSI_PORT &= ~_BV(MOSI);
+ 1b4:	de 98       	cbi	0x1b, 6	; 27
+
+        SCK_PORT |= _BV(SCK);
+ 1b6:	dc 9a       	sbi	0x1b, 4	; 27
+        rx <<= 1;
+        rx |= (MISO_PIN >> MISO) & 1;
+ 1b8:	99 b3       	in	r25, 0x19	; 25
+        SCK_PORT &= ~_BV(SCK);
+ 1ba:	dc 98       	cbi	0x1b, 4	; 27
+
+    for (;;) {
+        uint8_t tx = (BTN_PIN & _BV(BTN)) ? 0 : 1;
+        uint8_t rx = spi_transfer(tx);
+
+        if (rx)
+ 1bc:	95 fb       	bst	r25, 5
+ 1be:	99 27       	eor	r25, r25
+ 1c0:	90 f9       	bld	r25, 0
+ 1c2:	88 0f       	add	r24, r24
+ 1c4:	89 2b       	or	r24, r25
+ 1c6:	09 f0       	breq	.+2      	; 0x1ca <main+0xae>
+ 1c8:	ae cf       	rjmp	.-164    	; 0x126 <main+0xa>
+            LED_PORT |= _BV(LED);
+        else
+            LED_PORT &= ~_BV(LED);
+ 1ca:	c2 98       	cbi	0x18, 2	; 24
+ 1cc:	ad cf       	rjmp	.-166    	; 0x128 <main+0xc>
+
+uint8_t spi_transfer(uint8_t tx) {
+    uint8_t rx = 0;
+
+    for (uint8_t i = 0; i < 8; i++) {
+        if (tx & 0x80) MOSI_PORT |= _BV(MOSI);
+ 1ce:	de 9a       	sbi	0x1b, 6	; 27
+ 1d0:	f2 cf       	rjmp	.-28     	; 0x1b6 <main+0x9a>
+
+000001d2 <_exit>:
+ 1d2:	f8 94       	cli
+
+000001d4 <__stop_program>:
+ 1d4:	ff cf       	rjmp	.-2      	; 0x1d4 <__stop_program>

@@ -1,0 +1,556 @@
+COMMAND    PID USER   FD      TYPE             DEVICE  SIZE/OFF     NODE NAME
+firefox-e 5594 olaf  cwd       DIR                8,2     16384 12582914 /home/olaf
+firefox-e 5594 olaf  rtd       DIR                8,2      4096        2 /
+firefox-e 5594 olaf  txt       REG                8,2    539128  8409147 /usr/lib/firefox-esr/firefox-esr
+firefox-e 5594 olaf  DEL       REG                0,1               5139 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG               0,14               1045 anon_inode:i915.gem (stat: No such file or directory)
+firefox-e 5594 olaf  mem       REG                8,2    515752  8433777 /usr/share/fonts/truetype/noto/NotoSans-Bold.ttf
+firefox-e 5594 olaf  mem       REG                8,2    478456  9089099 /usr/share/fonts/truetype/croscore/Arimo-Regular.ttf
+firefox-e 5594 olaf  mem       REG                8,2    481924  9089096 /usr/share/fonts/truetype/croscore/Arimo-Bold.ttf
+firefox-e 5594 olaf  DEL       REG                0,1               2069 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               7189 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2    306536  9349519 /usr/share/fonts/truetype/roboto/unhinted/RobotoTTF/Roboto-Medium.ttf
+firefox-e 5594 olaf  DEL       REG                0,1               3091 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2    141504  8263773 /usr/lib/x86_64-linux-gnu/libnss_myhostname.so.2
+firefox-e 5594 olaf  mem       REG                8,2    107815  8282520 /usr/share/fonts/X11/Type1/NimbusSans-Bold.pfb
+firefox-e 5594 olaf  mem       REG                8,2    104021  8282523 /usr/share/fonts/X11/Type1/NimbusSans-Regular.pfb
+firefox-e 5594 olaf  DEL       REG                0,1               1053 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2    530120  8433779 /usr/share/fonts/truetype/noto/NotoSans-Italic.ttf
+firefox-e 5594 olaf  DEL       REG                0,1               1052 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1                 36 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2    512672  8433780 /usr/share/fonts/truetype/noto/NotoSans-Regular.ttf
+firefox-e 5594 olaf  DEL       REG                0,1               7192 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               7190 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2    829680  8420208 /usr/lib/firefox-esr/libfreeblpriv3.so
+firefox-e 5594 olaf  DEL       REG                0,1               4148 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1                 35 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5172 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               7191 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               2053 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               2052 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1                 34 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2   1310728 12582972 /home/olaf/.cache/mesa_shader_cache/index
+firefox-e 5594 olaf  mem       REG                8,2     22816  8293040 /usr/lib/x86_64-linux-gnu/libXxf86vm.so.1.0.0
+firefox-e 5594 olaf  DEL       REG                0,1               1043 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2    588876  8433977 /usr/share/fonts/truetype/noto/NotoSerif-Regular.ttf
+firefox-e 5594 olaf  DEL       REG                0,1               4107 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               6168 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               6167 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5182 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               7194 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               1045 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               6173 /memfd:xshmfence
+firefox-e 5594 olaf  DEL       REG                0,1               3106 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               3104 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2  31262256  8271711 /usr/lib/x86_64-linux-gnu/libicudata.so.72.1
+firefox-e 5594 olaf  DEL       REG                0,1                 17 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               3116 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               3084 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2     14528  8294319 /usr/lib/x86_64-linux-gnu/libXss.so.1.0.0
+firefox-e 5594 olaf  DEL       REG                0,1               6165 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               2065 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               7188 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1                 33 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               7187 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               4160 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2   2078888  8271721 /usr/lib/x86_64-linux-gnu/libicuuc.so.72.1
+firefox-e 5594 olaf  mem       REG                8,2  23278792  8293053 /usr/lib/x86_64-linux-gnu/libz3.so.4
+firefox-e 5594 olaf  mem       REG                8,2 117308864  8293054 /usr/lib/x86_64-linux-gnu/libLLVM-15.so.1
+firefox-e 5594 olaf  DEL       REG                0,1               6151 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               4147 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1                 22 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               1042 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5189 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               4163 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5188 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               1044 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               6163 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               6162 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               6161 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               7186 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               4161 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1                 32 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2  25762552  8401296 /usr/lib/x86_64-linux-gnu/dri/iris_dri.so
+firefox-e 5594 olaf  DEL       REG                0,1               2064 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5170 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5187 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               3115 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               3114 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               2066 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               4146 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               6154 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem-r     REG                8,2     32768 13812608 /home/olaf/.mozilla/firefox/Profile Groups/3da47188.sqlite-shm
+firefox-e 5594 olaf  mem       REG                8,2      6160  8293038 /usr/lib/x86_64-linux-gnu/libxshmfence.so.1.0.0
+firefox-e 5594 olaf  DEL       REG                0,1               2063 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               3110 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5157 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2   1750104  8257684 /usr/lib/x86_64-linux-gnu/libxml2.so.2.9.14
+firefox-e 5594 olaf  DEL       REG                0,1                 12 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               1031 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2     18504  8307047 /usr/lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+firefox-e 5594 olaf  DEL       REG                0,1               5140 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               6160 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               3113 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5186 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               3112 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2    167796  8403043 /usr/share/mime/mime.cache
+firefox-e 5594 olaf  mem       REG                8,2     87700  8683096 /usr/share/icons/gnome/icon-theme.cache
+firefox-e 5594 olaf  mem       REG                8,2    112712  8293028 /usr/lib/x86_64-linux-gnu/libxcb-glx.so.0.0.0
+firefox-e 5594 olaf  mem       REG                8,2    455416  8293057 /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0
+firefox-e 5594 olaf  mem       REG                8,2     35840  8264043 /usr/share/icons/hicolor/icon-theme.cache
+firefox-e 5594 olaf  mem       REG                8,2    124080  8423557 /usr/share/icons/Adwaita/icon-theme.cache
+firefox-e 5594 olaf  DEL       REG                0,1               2072 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               1054 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               2070 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               3081 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2     39368  8293044 /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1
+firefox-e 5594 olaf  mem       REG                8,2    204088  8260881 /usr/lib/x86_64-linux-gnu/libtinfo.so.6.4
+firefox-e 5594 olaf  mem       REG                8,2    216640  8264999 /usr/lib/x86_64-linux-gnu/libedit.so.2.0.70
+firefox-e 5594 olaf  mem       REG                8,2    147248  8293046 /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0
+firefox-e 5594 olaf  mem       REG                8,2     39216  8293048 /usr/lib/x86_64-linux-gnu/libdrm_nouveau.so.2.0.0
+firefox-e 5594 olaf  mem       REG                8,2     43424  8293042 /usr/lib/x86_64-linux-gnu/libdrm_amdgpu.so.1.0.0
+firefox-e 5594 olaf  DEL       REG                0,1               4116 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               7179 /memfd:xshmfence
+firefox-e 5594 olaf  mem       REG                8,2    109088  8264412 /usr/lib/x86_64-linux-gnu/libelf-0.188.so
+firefox-e 5594 olaf  mem       REG                8,2     51368  8293051 /usr/lib/x86_64-linux-gnu/libdrm_radeon.so.1.0.1
+firefox-e 5594 olaf  mem       REG                8,2     59792  8285511 /usr/lib/x86_64-linux-gnu/libsensors.so.5.0.0
+firefox-e 5594 olaf  DEL       REG                0,1               4106 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2    231688  8293019 /usr/lib/x86_64-linux-gnu/libglapi.so.0.0.0
+firefox-e 5594 olaf  mem       REG                8,2    542880  8293062 /usr/lib/mesa-diverted/x86_64-linux-gnu/libGL.so.1.7.0
+firefox-e 5594 olaf  mem       REG                8,2     30840  8293034 /usr/lib/x86_64-linux-gnu/libxcb-sync.so.1.0.0
+firefox-e 5594 olaf  mem       REG                8,2     67864  8293032 /usr/lib/x86_64-linux-gnu/libxcb-randr.so.0.1.0
+firefox-e 5594 olaf  mem       REG                8,2    719144  8293014 /usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0
+firefox-e 5594 olaf  DEL       REG                0,1               5167 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2    288248  8293069 /usr/lib/x86_64-linux-gnu/libEGL_mesa.so.0.0.0
+firefox-e 5594 olaf  mem       REG                8,2    141736  8293060 /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0
+firefox-e 5594 olaf  mem       REG                8,2    296936  8294193 /usr/lib/x86_64-linux-gnu/libmp3lame.so.0.0.0
+firefox-e 5594 olaf  mem       REG                8,2    372920  8264311 /usr/lib/x86_64-linux-gnu/libmpg123.so.0.47.0
+firefox-e 5594 olaf  mem       REG                8,2    383424  8294195 /usr/lib/x86_64-linux-gnu/libopus.so.0.8.0
+firefox-e 5594 olaf  mem       REG                8,2    694248  8294216 /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.12
+firefox-e 5594 olaf  mem       REG                8,2    407488  8294295 /usr/lib/x86_64-linux-gnu/libFLAC.so.12.0.0
+firefox-e 5594 olaf  mem       REG                8,2    554160  8269491 /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.35
+firefox-e 5594 olaf  mem       REG                8,2    547016  8402580 /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-16.1.so
+firefox-e 5594 olaf  mem       REG                8,2    338992  8294314 /usr/lib/x86_64-linux-gnu/libpulse.so.0.24.2
+firefox-e 5594 olaf  DEL       REG                0,1               5166 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5165 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2     22600  8293026 /usr/lib/x86_64-linux-gnu/libxcb-dri3.so.0.1.0
+firefox-e 5594 olaf  DEL       REG                0,1               5164 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5181 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5180 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               3107 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               3105 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2    333336  8420220 /usr/lib/firefox-esr/libsoftokn3.so
+firefox-e 5594 olaf  DEL       REG                0,1               5163 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2     14376  8293030 /usr/lib/x86_64-linux-gnu/libxcb-present.so.0.0.0
+firefox-e 5594 olaf  mem       REG                8,2     34856  8293036 /usr/lib/x86_64-linux-gnu/libxcb-xfixes.so.0.0.0
+firefox-e 5594 olaf  mem       REG                8,2     22584  8293024 /usr/lib/x86_64-linux-gnu/libxcb-dri2.so.0.0.0
+firefox-e 5594 olaf  DEL       REG                0,1               5162 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5161 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5160 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5159 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5158 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2     27028  8263352 /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+firefox-e 5594 olaf  mem       REG                8,2     84448  8293071 /usr/lib/mesa-diverted/x86_64-linux-gnu/libEGL.so.1.1.0
+firefox-e 5594 olaf  mem       REG                8,2     89672  8293064 /usr/lib/x86_64-linux-gnu/libwayland-server.so.0.21.0
+firefox-e 5594 olaf  mem       REG                8,2    178088  8291896 /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.9
+firefox-e 5594 olaf  mem       REG                8,2     84688  8293017 /usr/lib/x86_64-linux-gnu/libdrm.so.2.4.0
+firefox-e 5594 olaf  DEL       REG                0,1               5156 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5155 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               1030 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               6155 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2     64560  8293066 /usr/lib/x86_64-linux-gnu/libgbm.so.1.0.0
+firefox-e 5594 olaf  mem       REG                8,2     38752  8291894 /usr/lib/x86_64-linux-gnu/libogg.so.0.8.5
+firefox-e 5594 olaf  mem       REG                8,2     22368  8294311 /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+firefox-e 5594 olaf  DEL       REG                0,1               5137 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5132 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               3077 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               3103 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5133 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               3102 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               4151 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1                 21 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               4150 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5179 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               3094 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2    505832  8295297 /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.527
+firefox-e 5594 olaf  DEL       REG                0,1               5138 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               3082 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               3101 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1                 10 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               6149 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2      1164  9055565 /usr/local/share/icons/hicolor/icon-theme.cache
+firefox-e 5594 olaf  DEL       REG                0,1               3096 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               7183 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1                 16 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               1032 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2    510612  8419955 /usr/share/fonts/truetype/noto/NotoSansMono-Regular.ttf
+firefox-e 5594 olaf  mem       REG                8,2    450608 12606235 /home/olaf/.cache/fontconfig/0bd3dc0958fa2205aaaa8ebb13e2872b-le64.cache-8
+firefox-e 5594 olaf  DEL       REG                0,1               5136 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1                 20 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               4149 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2       260 14286941 /home/olaf/.local/share/mime/mime.cache
+firefox-e 5594 olaf  DEL       REG                0,1               6156 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2     38856  8423454 /usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-ibus.so
+firefox-e 5594 olaf  mem       REG                8,2     21448 12606290 /home/olaf/.cache/fontconfig/93a229ddef8289df64ac13624924bd14-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     52456 12606359 /home/olaf/.cache/fontconfig/a4e60e8d1e10d2fdff3fe3037a1845fb-le64.cache-8
+firefox-e 5594 olaf  DEL       REG                0,1               5135 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5134 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2     27320 12606423 /home/olaf/.cache/fontconfig/6fe8b0d39a161d19087fe931545dda13-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     18512 12606338 /home/olaf/.cache/fontconfig/6aa41aa22e18b8fa06a12da28ea9c28b-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     33440 12606301 /home/olaf/.cache/fontconfig/a6d8cf8e4ec09cdbc8633c31745a07dd-le64.cache-8
+firefox-e 5594 olaf  DEL       REG                0,1               5131 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5130 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2     28616 12606310 /home/olaf/.cache/fontconfig/63c7aca0c1b0a3f740ee470c2e28e675-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     25872 12606272 /home/olaf/.cache/fontconfig/270324a4f8f04b5b8e0371524e5a1fcd-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     22336 12606262 /home/olaf/.cache/fontconfig/bbd3eebb6912613e2596f2fd46535a95-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     18048 12606231 /home/olaf/.cache/fontconfig/c57959a16110560c8d0fcea73374aeeb-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     21832 12606211 /home/olaf/.cache/fontconfig/9d2451b1fd30e5bffe8383fd27c35478-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     26392 12606193 /home/olaf/.cache/fontconfig/3047814df9a2f067bd2d96a2b9c36e5a-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     78352 12606153 /home/olaf/.cache/fontconfig/d52a8644073d54c13679302ca1180695-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     31240 12606192 /home/olaf/.cache/fontconfig/bf3b770c553c462765856025a94f1ce6-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     14856 12606284 /home/olaf/.cache/fontconfig/62a296f92cd800a49657533f3dfe810f-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     49448 12606113 /home/olaf/.cache/fontconfig/d589a48862398ed80a3d6066f4f56f4c-le64.cache-8
+firefox-e 5594 olaf  DEL       REG                0,1               5129 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2     14176 12606172 /home/olaf/.cache/fontconfig/715927c029ee5789f7bcbe92036c8d73-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     27328 12606127 /home/olaf/.cache/fontconfig/75ad6aa2358a85f0de2c8ee4837e8227-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     70392 12605908 /home/olaf/.cache/fontconfig/198d8fcf01c96d0cf813f74fd759bdb7-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     58472 12605893 /home/olaf/.cache/fontconfig/6cc790b63b123a6a96ee260fcdad32a9-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     92728 12605882 /home/olaf/.cache/fontconfig/da82082e1ef13c4097208324d67c180c-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2  45646243  8402409 /usr/lib/firefox-esr/browser/omni.ja
+firefox-e 5594 olaf  DEL       REG                0,1               5128 /memfd:mozilla-ipc
+firefox-e 5594 olaf  DEL       REG                0,1               5127 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2     13216 12606160 /home/olaf/.cache/fontconfig/e49e89034d371f0f9de17aab02136486-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      7040 12605739 /home/olaf/.cache/fontconfig/2cce37071fd78829640a61fea3bb58f0-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      6768 12606273 /home/olaf/.cache/fontconfig/c3bb64600bf7a4aa73b55dc8bb82b27b-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     20856 12606104 /home/olaf/.cache/fontconfig/b25010134a2e462c779c1c1d5ccbff7b-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      6944 12606266 /home/olaf/.cache/fontconfig/767a8244fc0220cfb567a839d0392e0b-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     14048 12606110 /home/olaf/.cache/fontconfig/246184dc75a16901ca37d96895904249-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     48296 12605794 /home/olaf/.cache/fontconfig/83bf95040141907cd45bb53cf7c1c148-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2    171888 12605090 /home/olaf/.cache/fontconfig/e13b20fdb08344e0e664864cc2ede53d-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      4600 12606181 /home/olaf/.cache/fontconfig/80358e851108c3c2b55d9b5798e93f85-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     13136 12606053 /home/olaf/.cache/fontconfig/747030b94f39446b354ceb1e1acd0890-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     70816 12605498 /home/olaf/.cache/fontconfig/4a383c8a071a741265c3cc07ab0348ba-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     29272 12605937 /home/olaf/.cache/fontconfig/089dead882dea3570ffc31a9898cfb69-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     39360 12605572 /home/olaf/.cache/fontconfig/d0972c3d32f097851eb916381fc38920-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2  37685282  8420223 /usr/lib/firefox-esr/omni.ja
+firefox-e 5594 olaf  mem       REG                8,2      6904 12606158 /home/olaf/.cache/fontconfig/4b14b093aebc79c320de5e86ae1d3314-le64.cache-8
+firefox-e 5594 olaf  DEL       REG                0,1               3079 /memfd:mozilla-ipc
+firefox-e 5594 olaf  mem       REG                8,2      5360 12606058 /home/olaf/.cache/fontconfig/423767150eb258c59035de29db6fca84-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      7696 12606040 /home/olaf/.cache/fontconfig/7ced87123e2d184881c6610d82463bf1-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     11344 12606026 /home/olaf/.cache/fontconfig/6386b86020ecc1ef9690bb720a13964f-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      5952 12606009 /home/olaf/.cache/fontconfig/099525ddca5eae4f2477b69cf2d7f16d-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2   3048928  8269917 /usr/lib/locale/locale-archive
+firefox-e 5594 olaf  mem       REG                8,2     78256 12605483 /home/olaf/.cache/fontconfig/4ac51e5cfbc76fc3f983e470323a16d3-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2   3098696  8263600 /usr/lib/x86_64-linux-gnu/libvpx.so.7.1.0
+firefox-e 5594 olaf  mem       REG                8,2      5976 12605987 /home/olaf/.cache/fontconfig/61092ac79d9058a69eda095afa0a78f1-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     62064 12605496 /home/olaf/.cache/fontconfig/cadc3060d3cbe99d6aa4dd880095be12-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      6184 12605970 /home/olaf/.cache/fontconfig/a722efc6911bbe16667b1a77497ffd37-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      6160 12605969 /home/olaf/.cache/fontconfig/d63fdd8e0f42559533dd777c334fdfcc-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      7624 12605926 /home/olaf/.cache/fontconfig/bfc3d88043f4e56c1d755b876167bb77-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     11464 12605799 /home/olaf/.cache/fontconfig/75114ca45c98e8a441da0ff356701271-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     28584 12605502 /home/olaf/.cache/fontconfig/53d14c92082a93e67d5078324eb314ca-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2    142456 12606449 /home/olaf/.cache/fontconfig/467c019e582ee353435ea5c21d137ef6-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      2192 12606185 /home/olaf/.cache/fontconfig/0d83b4deeaa12e01cf49a0e4a38256fa-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      8872 12605610 /home/olaf/.cache/fontconfig/c67395ae27c12661fddd23da86d5de13-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      1888 12606137 /home/olaf/.cache/fontconfig/8a687c406b77f27d99abfeeba937fcce-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      3464 12606116 /home/olaf/.cache/fontconfig/3f7329c5293ffd510edef78f73874cfd-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      2104 12606037 /home/olaf/.cache/fontconfig/e7de81b01590fb7e12b38e274e17d0db-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     13920 12605464 /home/olaf/.cache/fontconfig/3629f2adf904f9a612908891fae71ceb-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      3936 12605918 /home/olaf/.cache/fontconfig/30829fa25452a46451e813d634d7f916-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     11136 12605481 /home/olaf/.cache/fontconfig/c19b55eb3b4c5b40ea175e31682068a5-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      8400 12605435 /home/olaf/.cache/fontconfig/4d61979dbde8c46a84bfdd79a1f6da86-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     10064 12605411 /home/olaf/.cache/fontconfig/361f143d0cd031e2e4d9179096c8df3c-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     57040 12606513 /home/olaf/.cache/fontconfig/8f02d4cb045bd6ce15663e43f347c9f8-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2    175096 12606446 /home/olaf/.cache/fontconfig/648b4514675b11aaee4510b3087facff-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2    176256 12655146 /home/olaf/.cache/fontconfig/1fb2ed708ac450a992fdf599582ff722-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2    264264  8521054 /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+firefox-e 5594 olaf  mem       REG                8,2    227680  8301167 /usr/lib/x86_64-linux-gnu/gio/modules/libgvfsdbus.so
+firefox-e 5594 olaf  mem       REG                8,2   1079888  8281520 /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+firefox-e 5594 olaf  mem       REG                8,2 176483368  8420222 /usr/lib/firefox-esr/libxul.so
+firefox-e 5594 olaf  mem       REG                8,2      6784 12605529 /home/olaf/.cache/fontconfig/6e6b34ae150a7ad95e82fb4a522f0bda-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     13064 12605404 /home/olaf/.cache/fontconfig/de83a0a961185c8bd1f159015d56c039-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      1936 12605822 /home/olaf/.cache/fontconfig/255c7f79afcc9d7df0b0b4dce75ec8e5-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      8944 12605406 /home/olaf/.cache/fontconfig/62f91419b9ebdb6975e7e41ab6412357-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     18088 12605308 /home/olaf/.cache/fontconfig/198dcdad82c1ebc3868edff741eb1653-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      2008 12605793 /home/olaf/.cache/fontconfig/190ffc35f1a3b2dab79b3911db521db5-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      1992 12605654 /home/olaf/.cache/fontconfig/20f64362fe0e193f346f70b7c4c81449-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      8448 12605363 /home/olaf/.cache/fontconfig/a93d7a67130f8d41c5da19d7938c1751-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      9368 12606500 /home/olaf/.cache/fontconfig/16326683038b281783a0ef8c680e3a10-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      2024 12605626 /home/olaf/.cache/fontconfig/92dbd7cf907446bab5f4775ae207b5b4-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      2048 12605510 /home/olaf/.cache/fontconfig/3334a778d104e76d188e9df399bc24d2-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      2080 12605485 /home/olaf/.cache/fontconfig/875e664e2852a379cc88176b1b54567f-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2    346512  8298088 /usr/lib/x86_64-linux-gnu/libevent-2.1.so.7.0.1
+firefox-e 5594 olaf  mem       REG                8,2    763816  8259738 /usr/lib/x86_64-linux-gnu/libzstd.so.1.5.4
+firefox-e 5594 olaf  mem       REG                8,2   1332480  8257928 /usr/lib/x86_64-linux-gnu/libgcrypt.so.20.4.1
+firefox-e 5594 olaf  mem       REG                8,2     22728  8282786 /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+firefox-e 5594 olaf  mem       REG                8,2      1872 12605465 /home/olaf/.cache/fontconfig/c277e94e32b20404286a1ddafa5a80f0-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      2032 12605460 /home/olaf/.cache/fontconfig/4cb9baa50231927582528d85cee63f48-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2    157768  8257923 /usr/lib/x86_64-linux-gnu/libgpg-error.so.0.33.1
+firefox-e 5594 olaf  mem       REG                8,2     47312  8258154 /usr/lib/x86_64-linux-gnu/libmd.so.0.0.5
+firefox-e 5594 olaf  mem       REG                8,2    149952  8257939 /usr/lib/x86_64-linux-gnu/liblz4.so.1.9.4
+firefox-e 5594 olaf  mem       REG                8,2    190456  8266781 /usr/lib/x86_64-linux-gnu/liblzma.so.5.4.1
+firefox-e 5594 olaf  mem       REG                8,2     47288  8259266 /usr/lib/x86_64-linux-gnu/libcap.so.2.66
+firefox-e 5594 olaf  mem       REG                8,2     84840  8263118 /usr/lib/x86_64-linux-gnu/libbsd.so.0.11.7
+firefox-e 5594 olaf  mem       REG                8,2    137376  8282312 /usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1.0.9
+firefox-e 5594 olaf  mem       REG                8,2    844736  8257634 /usr/lib/x86_64-linux-gnu/libsystemd.so.0.35.0
+firefox-e 5594 olaf  mem       REG                8,2     14496  8282780 /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+firefox-e 5594 olaf  mem       REG                8,2     47264  8282313 /usr/lib/x86_64-linux-gnu/libbrotlidec.so.1.0.9
+firefox-e 5594 olaf  mem       REG                8,2     34736  8291947 /usr/lib/x86_64-linux-gnu/libdatrie.so.1.4.0
+firefox-e 5594 olaf  mem       REG                8,2    355328  8261579 /usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0
+firefox-e 5594 olaf  mem       REG                8,2     14480  8260099 /usr/lib/x86_64-linux-gnu/libpthread.so.0
+firefox-e 5594 olaf  mem       REG                8,2    346264  8272439 /usr/lib/x86_64-linux-gnu/libdbus-1.so.3.32.4
+firefox-e 5594 olaf  mem       REG                8,2    235768  8291906 /usr/lib/x86_64-linux-gnu/libatspi.so.0.0.1
+firefox-e 5594 olaf  mem       REG                8,2     14480  8260084 /usr/lib/x86_64-linux-gnu/libdl.so.2
+firefox-e 5594 olaf  mem       REG                8,2    600128  8282193 /usr/lib/x86_64-linux-gnu/libjpeg.so.62.3.0
+firefox-e 5594 olaf  mem       REG                8,2    174184  8262281 /usr/lib/x86_64-linux-gnu/libexpat.so.1.8.10
+firefox-e 5594 olaf  mem       REG                8,2     47608  8285121 /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+firefox-e 5594 olaf  mem       REG                8,2     55560  8285109 /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+firefox-e 5594 olaf  mem       REG                8,2    166824  8282792 /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+firefox-e 5594 olaf  mem       REG                8,2     14392  8285115 /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+firefox-e 5594 olaf  mem       REG                8,2    219056  8282200 /usr/lib/x86_64-linux-gnu/libpng16.so.16.39.0
+firefox-e 5594 olaf  mem       REG                8,2    698384  8285102 /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.42.2
+firefox-e 5594 olaf  mem       REG                8,2    174264  8291923 /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.2.1
+firefox-e 5594 olaf  mem       REG                8,2    821160  8263679 /usr/lib/x86_64-linux-gnu/libfreetype.so.6.18.3
+firefox-e 5594 olaf  mem       REG                8,2     41000  8291949 /usr/lib/x86_64-linux-gnu/libthai.so.0.3.1
+firefox-e 5594 olaf  mem       REG                8,2    174312  8259775 /usr/lib/x86_64-linux-gnu/libselinux.so.1
+firefox-e 5594 olaf  mem       REG                8,2    404096  8259586 /usr/lib/x86_64-linux-gnu/libmount.so.1.1.0
+firefox-e 5594 olaf  mem       REG                8,2    121280  8259724 /usr/lib/x86_64-linux-gnu/libz.so.1.2.13
+firefox-e 5594 olaf  mem       REG                8,2     43480  8258038 /usr/lib/x86_64-linux-gnu/libffi.so.8.1.2
+firefox-e 5594 olaf  mem       REG                8,2    629384  8258161 /usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.11.2
+firefox-e 5594 olaf  mem       REG                8,2     18592  8291971 /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+firefox-e 5594 olaf  mem       REG                8,2     47416  8291975 /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+firefox-e 5594 olaf  mem       REG                8,2     14344  8291963 /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+firefox-e 5594 olaf  mem       REG                8,2     14344  8291969 /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+firefox-e 5594 olaf  mem       REG                8,2     47768  8291967 /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+firefox-e 5594 olaf  mem       REG                8,2     81568  8283065 /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+firefox-e 5594 olaf  mem       REG                8,2     35232  8291959 /usr/lib/x86_64-linux-gnu/libwayland-cursor.so.0.21.0
+firefox-e 5594 olaf  mem       REG                8,2     68968  8291957 /usr/lib/x86_64-linux-gnu/libwayland-client.so.0.21.0
+firefox-e 5594 olaf  mem       REG                8,2    281256  8291973 /usr/lib/x86_64-linux-gnu/libxkbcommon.so.0.0.0
+firefox-e 5594 olaf  mem       REG                8,2    243496  8291909 /usr/lib/x86_64-linux-gnu/libatk-bridge-2.0.so.0.0.0
+firefox-e 5594 olaf  mem       REG                8,2   1318408  8283057 /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0
+firefox-e 5594 olaf  mem       REG                8,2   1238616  8291919 /usr/lib/x86_64-linux-gnu/libepoxy.so.0.0.0
+firefox-e 5594 olaf  mem       REG                8,2    161712  8291889 /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.24609.1
+firefox-e 5594 olaf  mem       REG                8,2    186552  8265350 /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.4200.10
+firefox-e 5594 olaf  mem       REG                8,2    108808  8291921 /usr/lib/x86_64-linux-gnu/libfribidi.so.0.4.0
+firefox-e 5594 olaf  mem       REG                8,2    306112  8282703 /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0
+firefox-e 5594 olaf  mem       REG                8,2   1187432  8285127 /usr/lib/x86_64-linux-gnu/libcairo.so.2.11600.0
+firefox-e 5594 olaf  mem       REG                8,2   1064504  8291926 /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.60000.0
+firefox-e 5594 olaf  mem       REG                8,2    425568  8291951 /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.5000.12
+firefox-e 5594 olaf  mem       REG                8,2   1953008  8268137 /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.7400.6
+firefox-e 5594 olaf  mem       REG                8,2   1273360  8268139 /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.7400.6
+firefox-e 5594 olaf  mem       REG                8,2   1083728  8268430 /usr/lib/x86_64-linux-gnu/libgdk-3.so.0.2406.32
+firefox-e 5594 olaf  mem       REG                8,2   8497304  8268432 /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2406.32
+firefox-e 5594 olaf  mem       REG                8,2      2008 12605414 /home/olaf/.cache/fontconfig/443576e274091c064a264b43ae01d703-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      2280 12605392 /home/olaf/.cache/fontconfig/437bab76334ce2bef022d942ecdc4db4-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     76160  8291904 /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+firefox-e 5594 olaf  mem       REG                8,2    387288  8268143 /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.7400.6
+firefox-e 5594 olaf  mem       REG                8,2     13944  8293022 /usr/lib/x86_64-linux-gnu/libX11-xcb.so.1.0.0
+firefox-e 5594 olaf  mem       REG                8,2     18280  8420216 /usr/lib/firefox-esr/libmozwayland.so
+firefox-e 5594 olaf  mem       REG                8,2   1316384  8420215 /usr/lib/firefox-esr/libmozsqlite3.so
+firefox-e 5594 olaf  mem       REG                8,2   5930096  8420209 /usr/lib/firefox-esr/libgkcodecs.so
+firefox-e 5594 olaf  mem       REG                8,2      2440 12605368 /home/olaf/.cache/fontconfig/199c1c7bd88380a6edcc43c7631ccded-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      2696 12606484 /home/olaf/.cache/fontconfig/e0aa53bcfa504e64f87823c16bc01eb6-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2      2552  4863254 /var/cache/fontconfig/da43223dd54fb3bb4243ae19d4b583b2-le64.cache-8
+firefox-e 5594 olaf  mem       REG                8,2     26736  8291965 /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+firefox-e 5594 olaf  mem       REG                8,2    404904  8420221 /usr/lib/firefox-esr/libssl3.so
+firefox-e 5594 olaf  mem       REG                8,2    182496  8420219 /usr/lib/firefox-esr/libsmime3.so
+firefox-e 5594 olaf  mem       REG                8,2    697208  8420217 /usr/lib/firefox-esr/libnss3.so
+firefox-e 5594 olaf  mem       REG                8,2    186760  8420218 /usr/lib/firefox-esr/libnssutil3.so
+firefox-e 5594 olaf  mem       REG                8,2    166104  8420210 /usr/lib/firefox-esr/liblgpllibs.so
+firefox-e 5594 olaf  mem       REG                8,2    254440  8285466 /usr/lib/x86_64-linux-gnu/libnspr4.so
+firefox-e 5594 olaf  mem       REG                8,2    166160  8420214 /usr/lib/firefox-esr/libmozsandbox.so
+firefox-e 5594 olaf  mem       REG                8,2     14192  8291961 /usr/lib/x86_64-linux-gnu/libwayland-egl.so.1.21.0
+firefox-e 5594 olaf  mem       REG                8,2    100192  8291953 /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.5000.12
+firefox-e 5594 olaf  mem       REG                8,2   1926232  8260079 /usr/lib/x86_64-linux-gnu/libc.so.6
+firefox-e 5594 olaf  mem       REG                8,2    125312  8259737 /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+firefox-e 5594 olaf  mem       REG                8,2    911904  8260088 /usr/lib/x86_64-linux-gnu/libm.so.6
+firefox-e 5594 olaf  mem       REG                8,2   2190440  8259730 /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+firefox-e 5594 olaf  mem       REG                8,2       326  8423780 /usr/share/locale/en/LC_MESSAGES/gtk30-properties.mo
+firefox-e 5594 olaf  mem       REG                8,2      3222  8423782 /usr/share/locale/en/LC_MESSAGES/gtk30.mo
+firefox-e 5594 olaf  mem       REG                8,2     22632  8285467 /usr/lib/x86_64-linux-gnu/libplc4.so
+firefox-e 5594 olaf  mem       REG                8,2     14472  8285468 /usr/lib/x86_64-linux-gnu/libplds4.so
+firefox-e 5594 olaf  mem       REG                8,2     42768  8291912 /usr/lib/x86_64-linux-gnu/libcairo-gobject.so.2.11600.0
+firefox-e 5594 olaf  mem       REG                8,2     63456  8291955 /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.5000.12
+firefox-e 5594 olaf  mem       REG                8,2     18480  8268141 /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.7400.6
+firefox-e 5594 olaf  mem       REG                8,2     14176  8420213 /usr/lib/firefox-esr/libmozgtk.so
+firefox-e 5594 olaf  mem       REG                8,2    215000  8260072 /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+firefox-e 5594 olaf    0r     FIFO               0,13       0t0    43271 pipe
+firefox-e 5594 olaf    1u      CHR                4,1       0t0       20 /dev/tty1
+firefox-e 5594 olaf    2u      CHR                4,1       0t0       20 /dev/tty1
+firefox-e 5594 olaf    3r      CHR                1,3       0t0        4 /dev/null
+firefox-e 5594 olaf    4r      CHR                1,3       0t0        4 /dev/null
+firefox-e 5594 olaf    5r      CHR                1,3       0t0        4 /dev/null
+firefox-e 5594 olaf    6r     FIFO               0,13       0t0    35462 pipe
+firefox-e 5594 olaf    7w     FIFO               0,13       0t0    35462 pipe
+firefox-e 5594 olaf    8u     unix 0x00000000a21b30c6       0t0    35463 type=SEQPACKET (CONNECTED)
+firefox-e 5594 olaf    9u  a_inode               0,14         0     1045 [eventfd:183]
+firefox-e 5594 olaf   10u  a_inode               0,14         0     1045 [eventfd:191]
+firefox-e 5594 olaf   11u     unix 0x0000000077965b13       0t0    35466 type=SEQPACKET (CONNECTED)
+firefox-e 5594 olaf   12u     unix 0x000000006b6919fe       0t0    31638 type=STREAM (CONNECTED)
+firefox-e 5594 olaf   13u     unix 0x0000000073624a0d       0t0    35469 type=STREAM (CONNECTED)
+firefox-e 5594 olaf   14u  a_inode               0,14         0     1045 [eventfd:196]
+firefox-e 5594 olaf   16wW     REG                8,2         0 12583414 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/.parentlock
+firefox-e 5594 olaf   17u      CHR            226,128       0t0      282 /dev/dri/renderD128
+firefox-e 5594 olaf   18u  a_inode               0,14         0     1045 [eventpoll:21,25,77,80,90,99,134,138,149,168,170,172,189]
+firefox-e 5594 olaf   19r     FIFO               0,13       0t0    42710 pipe
+firefox-e 5594 olaf   20w     FIFO               0,13       0t0    42710 pipe
+firefox-e 5594 olaf   21r     FIFO               0,13       0t0    42711 pipe
+firefox-e 5594 olaf   22w     FIFO               0,13       0t0    42711 pipe
+firefox-e 5594 olaf   23r      REG                8,2  37685282  8420223 /usr/lib/firefox-esr/omni.ja
+firefox-e 5594 olaf   24r      REG                8,2  45646243  8402409 /usr/lib/firefox-esr/browser/omni.ja
+firefox-e 5594 olaf   25r     FIFO               0,13       0t0    42712 pipe
+firefox-e 5594 olaf   26w     FIFO               0,13       0t0    42712 pipe
+firefox-e 5594 olaf   27r     FIFO               0,13       0t0    46121 pipe
+firefox-e 5594 olaf   28w     FIFO               0,13       0t0    46121 pipe
+firefox-e 5594 olaf   29u  netlink                          0t0    30713 ROUTE
+firefox-e 5594 olaf   30r     FIFO               0,13       0t0    42713 pipe
+firefox-e 5594 olaf   31w     FIFO               0,13       0t0    42713 pipe
+firefox-e 5594 olaf   32r  a_inode               0,14         0     1045 inotify
+firefox-e 5594 olaf   33u     unix 0x0000000054f06d26       0t0    31641 type=STREAM (CONNECTED)
+firefox-e 5594 olaf   34uw     REG                8,2    524288 12583425 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/cookies.sqlite
+firefox-e 5594 olaf   35r     FIFO               0,13       0t0    46122 pipe
+firefox-e 5594 olaf   36w     FIFO               0,13       0t0    46122 pipe
+firefox-e 5594 olaf   37r      REG                0,1    242716     3077 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   38r      REG                0,1       182     3079 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   39u     unix 0x000000001051b873       0t0    47287 type=SEQPACKET (CONNECTED)
+firefox-e 5594 olaf   40u      REG                8,2    557496 12621019 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/cookies.sqlite-wal
+firefox-e 5594 olaf   41uw     REG                8,2     14848 12583428 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/storage.sqlite
+firefox-e 5594 olaf   42r      REG                0,1      7418     5127 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   43r      REG                0,1       226     5128 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   44r      REG                0,1      6190     5129 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   45r      REG                0,1      2172     5130 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   46u     unix 0x000000006cd2c297       0t0    46134 type=SEQPACKET (CONNECTED)
+firefox-e 5594 olaf   47r      REG                0,1      2356     5131 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   48r      REG                0,1     67990     5132 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   49r      REG                0,1     24560     5133 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   50r      REG                0,1       170     5134 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   51r      REG                0,1      2748     5135 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   52r      REG                0,1      1488     5136 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   53r      REG                0,1     21004     5137 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   54r      REG                0,1     11066     5138 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   55u      CHR              226,0       0t0      283 /dev/dri/card0
+firefox-e 5594 olaf   56u      CHR              226,0       0t0      283 /dev/dri/card0
+firefox-e 5594 olaf   57r      REG                0,1   1048576     4106 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   58u      CHR              226,0       0t0      283 /dev/dri/card0
+firefox-e 5594 olaf   59u      CHR              226,0       0t0      283 /dev/dri/card0
+firefox-e 5594 olaf   60uw     REG                8,2     98304 12583432 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/permissions.sqlite
+firefox-e 5594 olaf   61r      REG                0,1   1048576     4107 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   62u      REG                8,2    327680 12583456 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/cert9.db
+firefox-e 5594 olaf   63u      CHR              226,0       0t0      283 /dev/dri/card0
+firefox-e 5594 olaf   64u      CHR              226,0       0t0      283 /dev/dri/card0
+firefox-e 5594 olaf   65u      CHR              226,0       0t0      283 /dev/dri/card0
+firefox-e 5594 olaf   66u  a_inode               0,14         0     1045 [eventpoll:69,81,82,121,131,154,158,177]
+firefox-e 5594 olaf   67r      REG                0,1    460800     5139 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   68r      REG                0,1    271129     5140 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf   69u  a_inode               0,14         0     1045 [eventfd:200]
+firefox-e 5594 olaf   70u      REG                8,2    294912 12583457 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/key4.db
+firefox-e 5594 olaf   71uw     REG                8,2     98304 12621033 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/bounce-tracking-protection.sqlite
+firefox-e 5594 olaf   72u     unix 0x00000000ebd6ccbc       0t0    46127 type=SEQPACKET (CONNECTED)
+firefox-e 5594 olaf   73u     unix 0x00000000fc0b7da2       0t0    46128 type=SEQPACKET (CONNECTED)
+firefox-e 5594 olaf   74u  a_inode               0,14         0     1045 [eventpoll:76]
+firefox-e 5594 olaf   76u  a_inode               0,14         0     1045 [eventfd:201]
+firefox-e 5594 olaf   77u     unix 0x00000000ff4b5d8f       0t0    44296 type=STREAM (CONNECTED)
+firefox-e 5594 olaf   78u  a_inode               0,14         0     1045 [eventpoll:79]
+firefox-e 5594 olaf   79u  a_inode               0,14         0     1045 [eventfd:205]
+firefox-e 5594 olaf   80u     unix 0x000000002036b8bc       0t0    44298 type=STREAM (CONNECTED)
+firefox-e 5594 olaf   81u     unix 0x000000004369ee2f       0t0    47289 type=STREAM (CONNECTED)
+firefox-e 5594 olaf   82u     unix 0x00000000ae99fa49       0t0    46271 type=STREAM (CONNECTED)
+firefox-e 5594 olaf   83rw     REG                8,2   5242880 12583536 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/places.sqlite
+firefox-e 5594 olaf   84uw     REG                8,2    262144 12583453 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/formhistory.sqlite
+firefox-e 5594 olaf   85uw     REG                8,2   5242880 12583536 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/places.sqlite
+firefox-e 5594 olaf   86rw     REG                8,2   5242880 12583536 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/places.sqlite
+firefox-e 5594 olaf   88u      REG                8,2   2492224 12621108 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/places.sqlite-wal
+firefox-e 5594 olaf   89uw     REG                8,2   5242880 12583537 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/favicons.sqlite
+firefox-e 5594 olaf   90u     unix 0x00000000c58adc1f       0t0    43392 type=STREAM (CONNECTED)
+firefox-e 5594 olaf   91u      REG                8,2    754248 12621109 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/favicons.sqlite-wal
+firefox-e 5594 olaf   92rw     REG                8,2   5242880 12583536 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/places.sqlite
+firefox-e 5594 olaf   93u      REG                8,2   2492224 12621108 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/places.sqlite-wal
+firefox-e 5594 olaf   94rw     REG                8,2   5242880 12583537 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/favicons.sqlite
+firefox-e 5594 olaf   95u      REG                8,2    754248 12621109 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/favicons.sqlite-wal
+firefox-e 5594 olaf   96u      REG                8,2    426328 13812607 /home/olaf/.mozilla/firefox/Profile Groups/3da47188.sqlite-wal
+firefox-e 5594 olaf   97u     IPv4              49270       0t0      UDP *:33945 
+firefox-e 5594 olaf   98ur     REG                8,2     32768 13812606 /home/olaf/.mozilla/firefox/Profile Groups/3da47188.sqlite
+firefox-e 5594 olaf   99u     unix 0x000000006fc924c8       0t0    44300 type=STREAM (CONNECTED)
+firefox-e 5594 olaf  100ur     REG                8,2     32768 13812608 /home/olaf/.mozilla/firefox/Profile Groups/3da47188.sqlite-shm
+firefox-e 5594 olaf  101u     unix 0x00000000f250bf0a       0t0    47303 type=SEQPACKET (CONNECTED)
+firefox-e 5594 olaf  102u      REG                8,2   2492224 12621108 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/places.sqlite-wal
+firefox-e 5594 olaf  103u     unix 0x0000000046f028ba       0t0    46146 type=SEQPACKET (CONNECTED)
+firefox-e 5594 olaf  104uw     REG                8,2    262144 12583463 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/content-prefs.sqlite
+firefox-e 5594 olaf  105u      REG                0,1      4096     1030 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf  106rw     REG                8,2   5242880 12583537 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/favicons.sqlite
+firefox-e 5594 olaf  107u      REG                8,2    754248 12621109 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/favicons.sqlite-wal
+firefox-e 5594 olaf  108u     IPv4              45573       0t0      TCP laptop:56644->151.101.66.114:https (ESTABLISHED)
+firefox-e 5594 olaf  110u     IPv4              43744       0t0      UDP *:52645 
+firefox-e 5594 olaf  111u      REG                8,2   2492224 12621108 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/places.sqlite-wal
+firefox-e 5594 olaf  113u     IPv4              49263       0t0      UDP *:41553 
+firefox-e 5594 olaf  114rw     REG                8,2   5242880 12583537 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/favicons.sqlite
+firefox-e 5594 olaf  115u      REG                8,2    754248 12621109 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/favicons.sqlite-wal
+firefox-e 5594 olaf  116uw     REG                8,2     98304 12673971 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/domain_to_categories.sqlite
+firefox-e 5594 olaf  117u     IPv4              43742       0t0      TCP laptop:33246->waw02s16-in-f3.1e100.net:http (ESTABLISHED)
+firefox-e 5594 olaf  118u     IPv4              43743       0t0      TCP laptop:33262->waw02s16-in-f3.1e100.net:http (ESTABLISHED)
+firefox-e 5594 olaf  119u     unix 0x000000008c2a2118       0t0    42953 type=SEQPACKET (CONNECTED)
+firefox-e 5594 olaf  120u     IPv4              47606       0t0      TCP laptop:50906->ber01s04-in-f14.1e100.net:https (ESTABLISHED)
+firefox-e 5594 olaf  121u     unix 0x00000000a87cbf1e       0t0    44769 type=STREAM (CONNECTED)
+firefox-e 5594 olaf  122uw     REG                8,2     65536 12583566 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/protections.sqlite
+firefox-e 5594 olaf  123u     IPv4              49265       0t0      UDP *:44074 
+firefox-e 5594 olaf  124u     IPv4              49274       0t0      UDP *:50006 
+firefox-e 5594 olaf  125u     IPv4              49279       0t0      UDP *:47716 
+firefox-e 5594 olaf  126u     IPv4              48490       0t0      TCP laptop:33274->waw02s16-in-f3.1e100.net:http (ESTABLISHED)
+firefox-e 5594 olaf  127u     IPv4              50780       0t0      UDP *:40902 
+firefox-e 5594 olaf  128u     IPv4              48491       0t0      TCP laptop:33288->waw02s16-in-f3.1e100.net:http (ESTABLISHED)
+firefox-e 5594 olaf  129u     IPv4              49273       0t0      TCP laptop:35028->par10s21-in-f195.1e100.net:https (ESTABLISHED)
+firefox-e 5594 olaf  130u     IPv4              45813       0t0      UDP *:58614 
+firefox-e 5594 olaf  131u     unix 0x00000000afaa9156       0t0    43765 type=STREAM (CONNECTED)
+firefox-e 5594 olaf  132uw     REG                8,2      4096 14324306 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/storage/default/https+++www.youtube.com/cache/caches.sqlite
+firefox-e 5594 olaf  133u     IPv4              35500       0t0      TCP laptop:35544->93.243.107.34.bc.googleusercontent.com:https (ESTABLISHED)
+firefox-e 5594 olaf  134r     FIFO               0,13       0t0   103341 pipe
+firefox-e 5594 olaf  135u     IPv4              50774       0t0      UDP *:42810 
+firefox-e 5594 olaf  136u      REG                8,2    185432 14324310 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/storage/default/https+++www.youtube.com/cache/caches.sqlite-wal
+firefox-e 5594 olaf  137w     FIFO               0,13       0t0   103341 pipe
+firefox-e 5594 olaf  138u     unix 0x00000000580f2aba       0t0    45294 type=STREAM (CONNECTED)
+firefox-e 5594 olaf  139u     unix 0x00000000b7af4dfb       0t0    47510 type=SEQPACKET (CONNECTED)
+firefox-e 5594 olaf  140u     IPv4              45840       0t0      TCP laptop:35728->waw07s05-in-f3.1e100.net:https (ESTABLISHED)
+firefox-e 5594 olaf  141uw     REG                8,2     81920 14309671 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/storage/default/https+++www.google.com/ls/data.sqlite
+firefox-e 5594 olaf  142u     IPv4              48593       0t0      UDP *:46729 
+firefox-e 5594 olaf  143u     IPv4              45841       0t0      UDP *:46524 
+firefox-e 5594 olaf  144r      REG                0,1    662616     3091 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf  145u     IPv4              48595       0t0      TCP laptop:44220->waw07s05-in-f2.1e100.net:https (ESTABLISHED)
+firefox-e 5594 olaf  146u     IPv4              50776       0t0      UDP *:52019 
+firefox-e 5594 olaf  147u     IPv4             103499       0t0      UDP *:48327 
+firefox-e 5594 olaf  148u     IPv4              45850       0t0      TCP laptop:59452->205.ip-54-38-54.eu:https (ESTABLISHED)
+firefox-e 5594 olaf  149u     unix 0x00000000d660b4c6       0t0    45635 type=STREAM (CONNECTED)
+firefox-e 5594 olaf  150u     IPv4              44581       0t0      UDP *:43003 
+firefox-e 5594 olaf  151u     IPv4              45819       0t0      UDP *:38885 
+firefox-e 5594 olaf  152u     unix 0x0000000033334d8d       0t0    42964 type=SEQPACKET (CONNECTED)
+firefox-e 5594 olaf  153r      REG                0,1    662616     3091 /memfd:mozilla-ipc (deleted)
+firefox-e 5594 olaf  154u     unix 0x00000000d3b89984       0t0    45838 type=STREAM (CONNECTED)
+firefox-e 5594 olaf  155u     IPv4             103497       0t0      TCP laptop:35730->waw02s16-in-f3.1e100.net:http (ESTABLISHED)
+firefox-e 5594 olaf  156u     IPv4              45844       0t0      UDP *:49829 
+firefox-e 5594 olaf  157u     IPv4              48525       0t0      UDP *:48062 
+firefox-e 5594 olaf  158u     unix 0x00000000887f93eb       0t0    47654 type=STREAM (CONNECTED)
+firefox-e 5594 olaf  159u     unix 0x000000005bebeea8       0t0   102791 type=SEQPACKET (CONNECTED)
+firefox-e 5594 olaf  160u     IPv4              49549       0t0      TCP laptop:50200->par10s21-in-f10.1e100.net:https (ESTABLISHED)
+firefox-e 5594 olaf  161u     IPv4              49553       0t0      TCP laptop:54372->waw02s22-in-f14.1e100.net:https (ESTABLISHED)
+firefox-e 5594 olaf  162u     IPv4              45851       0t0      TCP laptop:59462->205.ip-54-38-54.eu:https (ESTABLISHED)
+firefox-e 5594 olaf  163u     IPv4              45852       0t0      UDP *:49976 
+firefox-e 5594 olaf  164u     IPv4              45854       0t0      TCP laptop:44204->162.247.243.39:https (ESTABLISHED)
+firefox-e 5594 olaf  165u     IPv4             104575       0t0      TCP laptop:59478->205.ip-54-38-54.eu:https (ESTABLISHED)
+firefox-e 5594 olaf  166u     IPv4             104576       0t0      TCP laptop:59490->205.ip-54-38-54.eu:https (ESTABLISHED)
+firefox-e 5594 olaf  167u     unix 0x000000001556d480       0t0    47677 type=SEQPACKET (CONNECTED)
+firefox-e 5594 olaf  168u     unix 0x00000000edbac1a7       0t0   103143 type=STREAM (CONNECTED)
+firefox-e 5594 olaf  169u     IPv4             104577       0t0      TCP laptop:59492->205.ip-54-38-54.eu:https (ESTABLISHED)
+firefox-e 5594 olaf  170u     unix 0x0000000060a8d461       0t0    44575 type=STREAM (CONNECTED)
+firefox-e 5594 olaf  171uw     REG                8,2  14852096 12583449 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/storage/permanent/chrome/idb/3870112724rsegmnoittet-es.sqlite
+firefox-e 5594 olaf  172u     unix 0x000000006d414aa6       0t0    44774 type=STREAM (CONNECTED)
+firefox-e 5594 olaf  173u     unix 0x000000000e91f592       0t0    42975 type=SEQPACKET (CONNECTED)
+firefox-e 5594 olaf  174u      REG                8,2         0 12588270 /home/olaf/.mozilla/firefox/06j4sc0g.default-esr/storage/permanent/chrome/idb/3870112724rsegmnoittet-es.sqlite-wal
+firefox-e 5594 olaf  175u     IPv4              50787       0t0      TCP laptop:44386->162.247.243.29:https (ESTABLISHED)
+firefox-e 5594 olaf  176u     IPv4              50788       0t0      TCP laptop:44398->162.247.243.29:https (ESTABLISHED)
+firefox-e 5594 olaf  177u     unix 0x0000000003edb659       0t0    49576 type=STREAM (CONNECTED)
+firefox-e 5594 olaf  178u     IPv4              50789       0t0      UDP *:39518 
+firefox-e 5594 olaf  180u     unix 0x00000000e29e66bc       0t0    47652 type=SEQPACKET (CONNECTED)
+firefox-e 5594 olaf  181u     unix 0x00000000a18fffda       0t0    49315 type=SEQPACKET (CONNECTED)
+firefox-e 5594 olaf  182u     IPv4              45860       0t0      UDP *:40346 
+firefox-e 5594 olaf  185u     unix 0x0000000072ce233f       0t0    45833 type=SEQPACKET (CONNECTED)
+firefox-e 5594 olaf  189u     unix 0x00000000f56cbd9d       0t0   103519 type=STREAM (CONNECTED)
+firefox-e 5594 olaf  200u     unix 0x00000000b08eec77       0t0    47740 type=SEQPACKET (CONNECTED)
