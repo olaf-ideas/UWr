@@ -1,0 +1,235 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+
+\geometry{margin=0.75in}
+\title{\vspace*{-0.75in}\textbf{Lista 1}}
+\author{Olaf Surgut \\ $345615$}
+
+\begin{document}
+\pagestyle{empty}
+\maketitle
+\thispagestyle{empty}
+
+\section*{Zadanie 1}
+
+Sprawdzić, że:
+\begin{align*}
+\text{(a)}\quad& \sum_{k = 0}^{n} \binom{n}{k} p^k (1-p)^{n-k} = (p + (1 - p))^n = 1 \\
+\text{(b)}\quad& \sum_{k = 0}^{n} k \binom{n}{k} p^k (1-p)^{n-k} 
+    = \sum_{k = 1}^{n} n \binom{n - 1}{k - 1} p^k (1-p)^{n-k}
+    = n \sum_{k = 1}^{n} \binom{n - 1}{k - 1} p p^{k-1} (1-p)^{n-1-(k-1)} \\
+    &= np \sum_{j = 0}^{n-1} \binom{n-1}{j} p^j (1-p)^{n-1-j} = np
+\end{align*}
+
+
+\section*{Zadanie 2}
+
+Sprawdzić, że:
+\begin{align*}
+\text{(a)}\quad& \sum_{k=0}^{\infty} e^{-\lambda}\frac{\lambda^k}{k!} 
+       = e^{-\lambda} \sum_{k=0}^{\infty} \frac{\lambda^k}{k!} 
+      = e^{-\lambda} e^{\lambda} = 1 \\
+\text{(b)}\quad& \sum_{k=0}^{\infty} k \cdot e^{-\lambda} \frac{\lambda^k}{k!}
+      = \sum_{k=1}^{\infty} e^{-\lambda}\frac{\lambda^k}{(k-1)!}
+      = \lambda \sum_{j=0}^{\infty} e^{-\lambda}\frac{\lambda^j}{j!}
+      = \lambda
+\end{align*}
+
+\section*{Zadanie 3}
+
+Funkcją $\Gamma$-Eulera nazywamy wartością całki:
+\[
+\Gamma(p) = \int_{0}^{\infty} t^{p-1}e^{-t}\, dt, \quad p > 0.
+\]
+Wykazać, że:
+\[ \Gamma(p) = (p-1)\Gamma(p-1), \quad p \in \mathbb{R_{+}} \]
+
+\[ \Gamma(p) = \int_{0}^{\infty} t^{p-1}e^{-t}\, dt \]
+\[ 
+\left\{
+\begin{aligned}
+u &= t^{p-1}, \qquad &dv&= e^{-t}\,dt\\ 
+du &= (p-1)t^{p-2}\,dt, \quad &v& =-e^{-t} 
+\end{aligned}
+\right.
+\]
+\begin{align*}
+\Gamma(p)
+&= \Big[-t^{p-1}e^{-t}\Big]_{0}^{\infty} + (p-1)\int_{0}^{\infty} t^{p-2} e^{-t}\,dt 
+= (p-1)\Gamma(p-1) 
+\end{align*}
+Podstawa indukcji dla $n = 0$.
+\[
+\Gamma(1)=\int_{0}^{\infty} t^{1-1}e^{-t}\, dt = \int_{0}^{\infty} e^{-t}\,dt = -e^{-t}\Big|_{0}^{\infty}=1=0!
+\]
+
+\section*{Zadanie 4}
+\begin{align*}
+(a)\;& \int_{0}^{\infty}\lambda e^{-\lambda x}\,dx= -e^{-\lambda x}\Big|_{0}^{\infty}=(0-(-1))=1 \\
+(b)\;& \int_{0}^{\infty}x \lambda e^{-\lambda x}\,dx=
+\end{align*}
+
+\[\left\{
+\begin{aligned}
+u &= x, \quad &dv& = \lambda e^{-\lambda x}\,dx\\
+du &= dx, \quad &v& = -e^{-\lambda x}
+\end{aligned}
+\right.\]
+
+\begin{align*}
+&= x (-e^{-\lambda x})\Big|_{0}^{\infty}-\int_{0}^{\infty} -e^{-\lambda x}\,dx=-\frac{1}{\lambda}e^{-\lambda x}\Big|_{0}^{\infty}=\frac{1}{\lambda}
+\end{align*}
+
+\section*{Zadanie 5}
+Wykazać, że $D_n = n$, gdzie
+\[
+  D_n = 
+\left|\,
+\begin{matrix}
+1      & -1 & -1 & \cdots & -1 \\
+1      & \phantom{-}1 &    &        &    \\
+1      &    &  \phantom{-}1 &        &    \\
+\vdots &    &    & \ddots &    \\
+1      &    &    &        & \phantom{-}1
+\end{matrix}
+\,\right| \overset{\text(1)}= 
+\left|\,
+\begin{matrix}
+n      & -1 & -1 & \cdots & -1 \\
+0      & \phantom{-}1 &    &        &    \\
+0      &    &  \phantom{-}1 &        &    \\
+\vdots &    &    & \ddots &    \\
+0      &    &    &        & \phantom{-}1
+\end{matrix}
+\,\right| \overset{\text(2)}= 
+\left|\,
+\begin{matrix}
+n      & 0 & 0 & \cdots & 0 \\
+0      & 1 &   &        &    \\
+0      &   & 1 &        &    \\
+\vdots &   &   & \ddots &    \\
+0      &   &   &        & 1
+\end{matrix}
+\,\right| = n \cdot \det(I_{n-1}) = n
+\]
+
+\begin{align*}
+\text(1)&\quad c_{0}:=c_{0}-c_{1}-\ldots-c_{n}, \text{ gdzie $c_i$ to $i$-ta kolumna $D_n$}\\
+\text(2)&\quad r_{0}:=r_{0}+r_{1}+\ldots+r_{n}, \text{ gdzie $r_i$ to $i$-ty wiersz $D_n$}
+\end{align*}
+
+
+\section*{Zadanie 6}
+Niech
+\[
+I=\int_{-\infty}^{\infty} \exp\!\left(-\frac{x^{2}}{2}\right)\,dx.
+\]
+Wówczas
+\[
+I^{2}
+=\left(\int_{-\infty}^{\infty} \exp\!\left(-\frac{x^{2}}{2}\right)\,dx\right)
+ \left(\int_{-\infty}^{\infty} \exp\!\left(-\frac{y^{2}}{2}\right)\,dy\right)
+=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}
+\exp\!\left(-\frac{x^{2}+y^{2}}{2}\right)\,dy\,dx.
+\]
+
+Stosujemy podstawienie biegunowe
+\[
+x=r\cos\theta,\qquad y=r\sin\theta,
+\]
+gdzie \(r\in[0,\infty)\), \(\theta\in[0,2\pi)\), a wyznaczane pole wynosi
+\[\text{Długość łuku $\times$ Grubość } = r\,d\theta\times\,dr\]
+Zatem
+\begin{align*}
+I^{2}
+&=\int_{0}^{2\pi}\int_{0}^{\infty}
+\exp\!\left(-\frac{r^{2}}{2}\right)\, r \,dr\,d\theta \\
+&=\left(\int_{0}^{2\pi} d\theta\right)
+  \left(\int_{0}^{\infty} r\,e^{-r^{2}/2}\,dr\right).
+\end{align*}
+W całce po \(r\) podstawiamy \(u=\frac{r^{2}}{2}\), wtedy \(du=r\,dr\), więc
+\[
+\int_{0}^{\infty} r\,e^{-r^{2}/2}\,dr
+=\int_{0}^{\infty} e^{-u}\,du
+=1.
+\]
+Ostatecznie
+\[
+I^{2} = (2\pi)\cdot 1 = 2\pi.
+\]
+
+\section*{Zadanie 7}
+Udowodnić, że:
+\begin{align*}
+\text{(a)}\quad& 
+   \sum_{k=1}^{n}(x_k-\bar{x})^2
+  =\sum_{k=1}^{n}x_k^2-2 x_k\bar{x}+\bar{x}^2
+  =\sum_{k=1}^{n}(x_k^2)-2 n\bar{x}\bar{x}+n\bar{x}^2
+  =\sum_{k=1}^{n}x_k^2-n\cdot\bar{x}^2  \\
+\text{(b)}\quad& 
+   \sum_{k=1}^{n}(x_k-\bar{x})(y_k-\bar{y})
+  =\sum_{k=1}^{n}x_k y_k - x_k \bar{y} - \bar{x} y_k + \bar{x} \bar{y}
+  =\sum_{k=1}^{n}(x_k y_k) - n \bar{x} \bar{y} - n \bar{x} \bar{y} + n \bar{x} \bar{y}
+  =\sum_{k=1}^{n}x_k y_k - n\bar{x}\bar{y}
+\end{align*}
+
+\section*{Zadanie 8}
+Dane są wektory $\vec{\mu}, X \in \mathbb{R}^n$ oraz macierz $\Sigma \in \mathbb{R}^{n\times n}$.
+Niech $S = (X-\vec{\mu})^T\Sigma^{-1}(X-\vec{\mu})$ oraz $Y = A \cdot X$, gdzie macierz $A$ jest
+odwracalna. Sprawdzić, że $S = (Y - A\vec{\mu})^T(A\Sigma A^T)^{-1}(Y - A\vec{\mu})$.
+
+\begin{align*}
+S &= (Y-A\vec{\mu})^T (A\Sigma A^T)^{-1} (Y-A\vec{\mu}) \\
+  &= Y^T (A\Sigma A^T)^{-1} Y 
+     - (A \vec{\mu})^T (A\Sigma A^T)^{-1} Y  \\
+  &\quad - Y^T (A\Sigma A^T)^{-1} A \vec{\mu} 
+     + (A \vec{\mu})^T (A\Sigma A^T)^{-1} A \vec{\mu} \\
+  &= X^T \Sigma^{-1} X 
+     - \vec{\mu}^T \Sigma^{-1} X 
+     - X^T \Sigma^{-1} \vec{\mu} 
+     + \vec{\mu}^T \Sigma^{-1} \vec{\mu} \\
+  &= (X-\vec{\mu})^T \Sigma^{-1} (X-\vec{\mu}).
+\end{align*}
+
+\section*{Zadanie 9}
+Udowodnić, że:
+\[\int_{0}^{\infty}x^k \,\lambda \exp(-\lambda x)\,dx = \frac{k!}{\lambda^k}, \quad k = 0, 1, \ldots, \quad \lambda > 0\]
+
+
+Podstawa indukcji $k = 0, 1$: (zadanie 4).
+
+Indukcja $k \implies k + 1$:
+
+\[\int_{0}^{\infty}x^k \,\lambda \exp(-\lambda x)\,dx = \]
+
+\[\left\{
+\begin{aligned}
+u &= x^k, \quad &dv& = \lambda e^{-\lambda x}\,dx\\
+du &= kx^{k-1}\,dx, \quad &v& = -e^{-\lambda x}
+\end{aligned}
+\right.
+\]
+
+\[
+= x^k (-e^{-\lambda x}) \Big|_{0}^{\infty} - \int_{0}^{\infty} kx^{k-1} (-e^{-\lambda x})\, dx = \frac{k}{\lambda} \int_{0}^{\infty} x^{k-1} \lambda e^{-\lambda x}\,dx = \frac{k}{\lambda} \frac{(k-1)!}{\lambda^(k-1)} = \frac{k!}{\lambda^k} 
+\]
+
+\section*{Zadanie 10}
+Obliczyć wartości całki
+\[ \int_{0}^{\infty} x\,\exp(-\frac{x^2}{2})\,dx = \]
+\[\left\{
+\begin{aligned}
+u = \frac{x^2}{2}, \quad du = x\,dx
+\end{aligned}
+\right.\]
+\[ \int_{0}^{\infty} e^{-u}\,du = -e^{-u} \Big|_{0}^{\infty} = 0 - (-1) = 1\]
+
+\end{document}
