@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1771758106.09221 "/home/olaf/studia/rpis/list1.tex" "list1.pdf" "list1" 1771758106.25994 0
-  "/home/olaf/studia/rpis/list1.tex" 1771758105.95149 6854 ea66904bf09448699063fe1fc48670af ""
+["pdflatex"] 1771758381.31459 "/home/olaf/studia/rpis/list1.tex" "list1.pdf" "list1" 1771758381.47627 0
+  "/home/olaf/studia/rpis/list1.tex" 1771758381.17279 6858 188ef57f3003bf559e0ff1cdd53f9a90 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1767555874 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1767555874 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1767555874 3584 13049b61b922a28b158a38aeff75ee9b ""
@@ -84,8 +84,8 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1767555874 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1768418955 368486 0fc0f0fcb526a23a1aaab3928926d832 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1771610775 2789214 a7410890ed2fa83728cfda5ad44e4c74 ""
-  "list1.aux" 1771758106.22883 169 179a937bc52bd28f6161a20f8be6f4cf "pdflatex"
-  "list1.tex" 1771758105.95149 6854 ea66904bf09448699063fe1fc48670af ""
+  "list1.aux" 1771758381.44479 169 179a937bc52bd28f6161a20f8be6f4cf "pdflatex"
+  "list1.tex" 1771758381.17279 6858 188ef57f3003bf559e0ff1cdd53f9a90 ""
   (generated)
   "list1.aux"
   "list1.log"
