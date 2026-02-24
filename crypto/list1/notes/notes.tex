@@ -1,0 +1,112 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+
+\geometry{margin=0.75in}
+\title{\vspace*{-0.75in}\textbf{Lista 1}}
+\author{Olaf Surgut \\ $345615$}
+
+\begin{document}
+\pagestyle{empty}
+\maketitle
+\thispagestyle{empty}
+
+\section*{Zadanie 1}
+
+\section*{Zadanie 2}
+Klucz szufru Hill'a dla bloku o długości $2$ nad 26-literowym alfabetem opisuje odwracalna macierz $2\times2$, gdzie $a_{i,j} \in \mathbb{Z}_{26}$. Macierz jest odwracalna jeśli $a_{1,1}a_{2,2}\neq a_{2,1}a_{1,2}$.\\
+Licząc wszystko prostym skryptem iterującym sie po każdym elemencie w macierzy otrzymujemy: $452118$ możliwych kluczy.
+
+\section*{Zadanie 3}
+Podobny skrypt jak w zadaniu 1. Wychodzą $2$ klucze.
+
+\section*{Zadanie 4}
+Dla $m = 1,2,3$ sprawdzam czy istnieje macierz. \\
+Dla danego $m$ wystarczy wziąść pierwsze $m^2$ wyrazów, policzyć rozwiązania $\mod 2 \text{ oraz } \mod 13$, a jeśli jakieś rozwiązanie wyszło z obu to użyć CRT, aby odzyskać wynik.\\
+Macierzą szyfrowania okazuje się:\\
+\[
+\begin{bmatrix}
+3&4&6\\
+21&15&14\\
+20&23&5
+\end{bmatrix}\]
+
+\section*{Zadanie 5}
+Rozważmy wszystkie układy liczb dodatnich $p_A, \ldots, p_Z$, takie, że $p_A + p_B + \ldots + p_Z = 1$. Dla jakiego układu liczb wartość sumy $\sum_{l} p_l^2$ jest najmniejsza i ile ona wynosi?.
+
+Weźmy dowolne rozwiązanie $q_A, \ldots, q_B$. Pokaże, żę wszystkie wartości muszą być takie same.
+
+Biorąc dowolne $q_i = a$ oraz $q_j = b$, kontrybuują one do minimalizowanej sumy dokładnie $a^2+b^2$.
+
+\begin{align*}
+a+b = \text{const} = x\\
+f(a) = a^2 + b ^ 2 = a^2 + (x-a)^2\\
+f'(a) = 4a - 2x\\
+4a - 2x = 0\\
+a = \frac{x}{2} \implies b = \frac{x}{2} = a
+\end{align*}
+
+Wartość sumy musi wynosić $\sum_{l} \frac{1}{26}^2 = \frac{1}{26}$.
+
+\section*{Zadanie 6}
+\begin{align*}
+H(p) = -\sum_l p_l \log_2{p_l}\\
+\text{Z mnożników Lagrange'a } \mathcal{L}(p, \lambda)=-\sum p_l\log_2{p_l}+\lambda(\sum p_l - 1)\\
+\frac{\partial \mathcal{L}}{\partial p_i} = -(\log_2 p_i + \frac{1}{\ln 2}) + \lambda = 0 \implies 
+\log_2 p_i = \lambda - \frac{1}{\ln 2} = \log_2 p_j \implies p_i = p_j\\
+-\sum \frac{1}{26} \log_2 \frac{1}{26} = -\log_2 \frac{1}{26} = \log_2 26 \approx 4.7
+\end{align*}
+
+\section*{Zadanie 7}
+Szyfr ma własność bezpieczeństwa doskonałego jeżeli dla każdego szyfrogramu $c$ i każdego tekstu jawnego $m$ istniał klucz $k$,
+taki, że $E_k(m)=c$. Każdy szyfrogram musi być możliwy dla każdego tesktu jawnego. Czyli $|\mathcal{C}| \geq |\mathcal{M}|$, ale 
+$|\mathcal{C}| \leq |\mathcal{K}|$. Sprzeczność.
+
+\section*{Zadanie 8}
+Pokaż, że grupa cykliczna rzędu $d$ ma $\varphi(d)$ generatorów.
+
+\begin{align*}
+\text{Grupa $G$ jest cykliczna } \Leftrightarrow \text{Istnieje $g$, które generuje $G$ ($\{g^k|k\in\mathbb{Z}\}$)}\\
+\text{To oznacza, że dla każdy $x = g^k$, dla pewnego $k$}\\
+\text{Weźmy $k$, takie że $\gcd(k, d)\neq1$ }\\
+x^l = (g^k)^l = (g^kl) \neq g^{k+1}\\
+\text{$kl$ jest podzielne przez $gcd$, ale $k+1$ nie może być, więc $x$ nie może być generatorem.}\\
+\text{Weźmy $k$, takie że $\gcd(k, d)=1$}\\
+\text{Z algorytmy Euklidesa dla każdego zadanego $s$ istnieje $x,y$, takie że $dx+ky=s$}\\
+\text{Oznacza to, że $g^{dx+ky}=g^{ky}=g^s$}\\
+\text{$g^k$ jest generatorem $\Leftrightarrow \gcd(d,k)=1$, więc jest ich $\varphi(d)$}
+\end{align*}
+
+Jeśli za rząd wybierzemy $e, e|d$, to podstawiając w podprzednim dowodzie $g:=g^{\frac{d}{e}}, d := e$ otrzymamy, że jest ich $\varphi(e)$.
+
+Każdy element ma unikalny rząd, więc
+\[
+\sum_{e:e|d}\varphi (e) = d
+\]
+
+\section*{Zadanie 9}
+$(x-1)(x+1)=0$, któryś z nawiasów musi być podzielne przez $p$. Z tego wynika, że $x = -1$ lub $x = +1$.
+
+\section*{Zadanie 10}
+Dla $p > 2$: \\
+$(x-1)(x+1)=1 \mod p^{\alpha}$\\
+Jeśli $p | (x-1)$ oraz $p | (x + 1)$ to $p | (x+1)-(x+2)=2$, więc $p=2$ i sprzeczność.\\
+Oznacza to, że $p^\alpha | (x-1)$ lub $p^\alpha | (x+1)$.
+Jedyne rozwiązania to $x=1$ oraz $x=-1$.\\
+\\
+Dla $p = 2$: $\gcd(x-1),(x+1)=2$, więc $2^{\alpha-1}$ dzieli $(x-1)$ lub $(x+1)$. $x = \pm 1$ lub $x = \pm 1 + 2^{\alpha-1}$.
+Więc dla $\alpha = 1$ mamy $1$ rozwiązanie, dla $\alpha=2$ mamy $2$ rozwiązania oraz dla $\alpha \ge 3$ mamy 4 rozwiązania.
+\section*{Zadanie 11}
+Niech $\sigma(p,k)$ oznacza liczbę rozwiązań dla $x^2=1 \mod p^k$ z zadania 10.
+
+Z CRT wiemy, że dla parami względnie pierwszych moduli istnieje tylko jedno rozwiązanie.
+Co oznacza, że liczba rozwiązań $n=p_1^{k_1}\ldots p_s^{k_s}$ wynosi $\prod_{i=1}^{s} \sigma(p_i,k_i)$. 
+
+\end{document}
