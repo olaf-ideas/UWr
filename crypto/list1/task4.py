@@ -107,7 +107,7 @@ c_vals = [ord(x) - ord('A') for x in c]
 print(t_vals)
 print(c_vals)
 
-for m in [2,3]: #range(1, len(t)):
+for m in [3]: #range(1, len(t)):
   if m * m > (len(t) // m) * m or len(t) % m != 0:
     continue
   

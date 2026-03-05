@@ -1,0 +1,80 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{enumitem}
+
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+
+\geometry{margin=0.75in}
+\title{\vspace*{-0.75in}\textbf{Lista 1}}
+\author{Olaf Surgut \\ $345615$}
+
+\begin{document}
+\pagestyle{empty}
+\maketitle
+\thispagestyle{empty}
+
+\section*{Zadanie 1}
+
+\section*{Zadanie 2}
+
+\verb|grep| -- print lines that match patterns
+
+\subsection*{Synopsis}
+
+\begin{verbatim}
+grep [OPTION...] PATTERNS [FILE...]
+
+\end{verbatim}
+
+\subsection*{Fast examples}
+
+\begin{verbatim}
+ps aux | grep firefox
+grep -r --include="*.c" "matmul(" ~
+\end{verbatim}
+
+\subsection*{Regex -- basic symbols}
+
+\begin{tabular}{ll}
+\verb|^| & start of line \\
+\verb|$| & end of line \\
+\verb|.| & any single character except newline \\
+\verb|*| & 0 or more repetitions \\
+\verb|+| & 1 or more repetitions \\
+\verb|?| & 0 or 1 repetition \\
+\verb|{n}| & exactly n repetitions \\
+\verb|{n,m}| & between n and m repetitions \\
+\verb|[abc]| & one of a, b, c \\
+\verb|[a-z]| & character range \\
+\verb|[^abc]| & NOT a, b, c \\
+\verb!(cat|dog)! & grouping / alternation \\
+\end{tabular}
+
+\subsection*{Regex examples}
+
+\begin{verbatim}
+[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}
+^(https?|ftp)://
+\.(jpg|png|gif)$
+\end{verbatim}
+
+\subsection*{Grep examples}
+\begin{tabular}{ll}
+\verb|grep -r --exclude-dir=.git "TODO"| & Search in a project \\
+\verb|grep -v '^#' config.conf| & Remove comments from config \\
+\verb|grep -C 3 "ERROR" logfile.txt| & Print 3 lines before and after \\
+\verb|-o| & Extract only the matched pattern\\
+\verb|-w| & Match whole words\\
+\verb|-F| & No regex (literal pattern)\\
+\verb|-m| & Stop after $x$ matches
+\end{tabular}
+
+\section*{Zadanie 6}
+
+\end{document}
